@@ -1,9 +1,10 @@
+import { Center, Title } from '@mantine/core'
 import React from 'react'
 
 const PerformanceOptimization = () => {
   return (
     <div>
-        comming soon
+        <Title order={1} align={'center'} mt={50}>Coming Soon</Title>
     </div>
   )
 }
