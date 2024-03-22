@@ -3,7 +3,7 @@ import React from 'react'
 const gettingStarted = () => {
   return (
     <div>
-     coming soon 
+     coming soon !!!!!!!!!!!
       
     </div>
   )
