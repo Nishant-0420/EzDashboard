@@ -19,8 +19,8 @@ export default function Home() {
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained to detect lazy
-            developers who do nothing and just complain on X.
+             AI is also trained to detect lazy...
+            developers who do nothing and just complain on XXX...
           </Text>
         </Container>
 
