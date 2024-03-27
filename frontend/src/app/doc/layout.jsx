@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
 
     return (
         <>
-            
+
 
             <AppShell
                 header={{ height: 60 }}
@@ -18,10 +18,10 @@ const MainLayout = ({ children }) => {
                 padding="md"
             >
                 <AppShell.Header>
-                <Navbar />
+
                 </AppShell.Header>
-                <AppShell.Navbar p="md">
-                    
+                <AppShell.Navbar>
+                    <Navbar />
                 </AppShell.Navbar>
                 <AppShell.Main>{children}</AppShell.Main>
             </AppShell>

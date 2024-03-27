@@ -10,21 +10,8 @@ const MainLayout = ({ children }) => {
 
     return (
         <>
-            
-
-            <AppShell
-                header={{ height: 60 }}
-                navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
-                padding="md"
-            >
-                <AppShell.Header>
-                <Navbar />
-                </AppShell.Header>
-                <AppShell.Navbar p="md">
-                    
-                </AppShell.Navbar>
-                <AppShell.Main>{children}</AppShell.Main>
-            </AppShell>
+            <Navbar />
+            {children}
         </>
     )
 }
