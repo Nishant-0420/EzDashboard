@@ -2,6 +2,9 @@
   "dependencies": {
     "@mantine/form": "^7.7.0",
     "@mantinex/dev-icons": "^1.0.2",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "i": "^0.3.7",
+    "npm": "^10.5.0",
+    "props": "^0.3.0"
   }
 }

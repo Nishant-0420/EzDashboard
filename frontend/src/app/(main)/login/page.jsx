@@ -14,8 +14,8 @@ import {
   Anchor,
   Stack,
 } from '@mantine/core';
-import { GoogleButton } from '../login/googleButton';
-import TwitterButton from './twitterButton';
+// import { GoogleButton } from '../login/googleButton';
+// import TwitterButton from './twitterButton';
 
 export function Login(props) {
   const [type, toggle] = useToggle(['login', 'register']);
@@ -40,8 +40,8 @@ export function Login(props) {
       </Text>
 
       <Group grow mb="md" mt="md">
-        <GoogleButton radius="xl">Google</GoogleButton>
-        <TwitterButton radius="xl">Twitter</TwitterButton>
+        {/* <GoogleButton radius="xl">Google</GoogleButton>
+        <TwitterButton radius="xl">Twitter</TwitterButton> */}
       </Group>
 
       <Divider label="Or continue with email" labelPosition="center" my="lg" />
