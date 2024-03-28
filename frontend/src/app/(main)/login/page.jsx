@@ -36,7 +36,7 @@ export function Login(props) {
   return (
     <Paper radius="md" p="xl" withBorder {...props}>
       <Text size="lg" fw={500}>
-        Welcome to Mantine, {type} with
+        Welcome to EzDashboard, {type} with
       </Text>
 
       <Group grow mb="md" mt="md">
