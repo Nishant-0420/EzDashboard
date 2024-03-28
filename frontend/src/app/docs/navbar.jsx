@@ -14,32 +14,34 @@ import { Logo } from './logo';
 import classes from './navbarNested.module.css';
 
 const mockdata = [
-  { label: 'API reference ', icon: IconGauge },
+  { label: 'API reference ', icon: IconGauge, link: '/docs/api-reference' },
   {
     label: 'Contributing',
-    icon: IconNotes
-    
+    icon: IconNotes,
+    link: '/docs/contributing'
   },
   {
     label: 'Release-Note',
     icon: IconCalendarStats,
+    link: '/docs/Release-note',
     links: [
       { label: 'Upcoming releases', link: '/' },
       { label: 'Previous releases', link: '/' },
       { label: 'Releases schedule', link: '/' },
     ],
   },
-  { label: 'Data Integration ', icon: IconPresentationAnalytics },
-  { label: 'Example ', icon: IconFileAnalytics },
-  { label: 'FAQs Trrobleshooting', icon: IconAdjustments },
+  { label: 'Data Integration ', icon: IconPresentationAnalytics, link: '/docs/data-integration' },
+  { label: 'Example ', icon: IconFileAnalytics, link: '/docs/example' },
+  { label: 'FAQs Trrobleshooting', icon: IconAdjustments, link: '/docs/Faqs-troubleshooting' },
   {
     label: 'Getting Started ',
-    icon: IconLock
+    icon: IconLock,
+    link: '/docs/gettingStarted'
    
   },
-  { label: 'License Legal ', icon: IconAdjustments },
-  { label: 'Performance Optimization ', icon: IconAdjustments },
-  { label: 'Theme styling ', icon: IconAdjustments },
+  { label: 'License Legal ', icon: IconAdjustments, link: '/docs/License-Legal' },
+  { label: 'Performance Optimization ', icon: IconAdjustments, link: '/docs/performance-optimization' },
+  { label: 'Theme styling ', icon: IconAdjustments, link: '/docs/theme-styling' },
 ];
 
 export function Navbar() {
@@ -48,9 +50,9 @@ export function Navbar() {
   return (
     <nav className={classes.navbar}>
       <div className={classes.header}>
-        <Group justify="space-between">
-          <Title order={3}>EzDashboard </Title>
-          <Code fw={700}>v3.1.2</Code>
+        <Group justify="space-between" >
+          <Title order={2}>EzDashboard </Title>
+          
         </Group>
       </div>
 

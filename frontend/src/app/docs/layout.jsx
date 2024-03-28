@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
                 header={{ height: 60 }}
                 navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
                 padding="md"
-                // layout='alt'
+                layout='alt'
             >
                 <AppShell.Header>
                         <Header />
