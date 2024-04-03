@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid } from '@mantine/core';
+import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid, Container } from '@mantine/core';
 import { ContactIconsList } from './ContactIcons';
 import bg from './bg.svg';
 import classes from './GetInTouch.module.css';
@@ -8,6 +8,7 @@ import classes from './GetInTouch.module.css';
 
 const Contact= () => {
   return (
+    <Container>
     <Paper shadow="md" radius="lg">
       <div className={classes.wrapper}>
         <div className={classes.contacts} style={{ backgroundImage: `url(${bg.src})` }}>
@@ -47,7 +48,7 @@ const Contact= () => {
         </form>
       </div>
     </Paper>
-  
+  </Container>
   )
 }
 

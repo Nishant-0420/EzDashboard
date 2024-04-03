@@ -12,6 +12,7 @@ import {
   Checkbox,
   Anchor,
   Stack,
+  Container
 } from '@mantine/core';
  import { GoogleButton } from '../login/googleButton';
  import TwitterButton from './twitterButton';
@@ -33,6 +34,7 @@ export function Login(props) {
   });
 
   return (
+    <Container w={530}>
     <Paper radius="md" p="xl" withBorder {...props}>
       <Text size="lg" fw={500}>
         Welcome to EzDashboard, {type} with
@@ -98,6 +100,7 @@ export function Login(props) {
         </Group>
       </form>
     </Paper>
+    </Container>
   );
 }
 
