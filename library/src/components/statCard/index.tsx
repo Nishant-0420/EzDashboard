@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import tailwindThemeClasses from '../';
+import tailwindThemeClasses from '../../themes/themes';
 
 interface StatCardProps {
     value: number;

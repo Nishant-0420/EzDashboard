@@ -1,6 +1,6 @@
+import React from "react";
 import { createContext, useState } from "react";
-import { AppDashboardInterface } from "../../types/ContextTypes";
-import { BrowserRouter, useNavigate } from "react-router-dom";
+import { AppDashboardInterface } from "../types/ContextTypes";
 
 const DashboardContext = createContext<AppDashboardInterface>({
     user: null,
@@ -9,12 +9,13 @@ const DashboardContext = createContext<AppDashboardInterface>({
 
 export const DashboardProvider = ({children}: { children: React.ReactNode }) => {
 
-    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('currentUser')));
-    const [loggedIn, setLoggedIn] = useState(currentUser!==null);
+    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('currentUser') ?? ''));
+    const [loggedIn, setLoggedIn] = useState(currentUser !== '');
+
 
     const logout = () => {
         sessionStorage.removeItem('currentUser');
-        setCurrentUser(null);
+        setCurrentUser('');
         setLoggedIn(false);
     }
 
