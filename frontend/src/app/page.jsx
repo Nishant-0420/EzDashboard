@@ -1,38 +1,79 @@
-import cx from 'clsx';
-import { Title, Text, Container, Button, Overlay } from '@mantine/core';
-// import { GithubIcon } from '@mantinex/dev-icons';
-import classes from './page.module.css';
-import { Icon3dRotate } from '@tabler/icons-react';
 
-export default function Home() {
+import React from 'react'
+import classes from './Home.module.css'
+import { Container, Title, Text, Button } from '@mantine/core';
+import Header from './Header';
+import FeaturesCards from './FeaturesCards';
+import {  TextInput, Image } from '@mantine/core';
+// import image from './image.svg';
+import Footer from './Footer';
+
+const Home = () => {
   return (
-    <div className={classes.wrapper}>
-      <Overlay color="#000" opacity={0.55} zIndex={1} />
+    <>
+      <Header />
+      <div className={classes.root}>
+        <Container size="lg">
+          <div className={classes.inner}>
+            <div className={classes.content}>
+              <Title className={classes.title}>
+                A{' '}
+                <Text
+                  component="span"
+                  inherit
+                  variant="gradient"
+                  gradient={{ from: 'pink', to: 'yellow' }}
+                >
+                  fully featured
+                </Text>{' '}
+                React components library
+              </Title>
 
-      <div className={classes.inner}>
-        <Title className={classes.title}>
-          Automated AI code reviews for{' '}
-          <Text component="span" inherit className={classes.highlight}>
-            any stack
-          </Text>
-        </Title>
+              <Text className={classes.description} mt={30}>
+                Build fully functional accessible web applications with ease – Mantine includes more
+                than 100 customizable components and hooks to cover you in any situation
+              </Text>
 
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-             AI is also trained to detect lazy..
-            developers who do nothing and just complain on XXX...
-          </Text>
+              <Button
+                variant="gradient"
+                gradient={{ from: 'pink', to: 'yellow' }}
+                size="xl"
+                className={classes.control}
+                mt={40}
+              >
+                Get started
+              </Button>
+            </div>
+          </div>
         </Container>
+      </div>
+      <FeaturesCards/>
+      <div className={classes.wrapper}>
+      <div className={classes.body}>
+        <Title className={classes.title}>Wait a minute...</Title>
+        <Text fw={500} fz="lg" mb={5}>
+          Subscribe to our newsletter!
+        </Text>
+        <Text fz="sm" c="dimmed">
+          You will never miss important product updates, latest news and community QA sessions. Our
+          newsletter is once a week, every Sunday.
+        </Text>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
-            Get started
-          </Button>
-          <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
-            Live demo
-          </Button>
+          <TextInput
+            placeholder="Your email"
+            classNames={{ input: classes.input, root: classes.inputWrapper }}
+          />
+          <Button className={classes.control}>Subscribe</Button>
         </div>
       </div>
+      {/* <Image  src="https://cdn1.vectorstock.com/i/1000x1000/90/65/dashboard-service-concept-banner-header-vector-24529065.jpg"  /> */}
+      <Image src="image/banner-image.png"alt="banner" />
     </div>
-  );
+      <Footer/>
+    </>
+  )
+
 }
+
+export default Home;
