@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import tailwindThemeClasses from '../../themes/themes';
+import './statCard.css';
 
 interface StatCardProps {
     value: number;
@@ -15,6 +16,7 @@ const StatCard: React.FC<StatCardProps> = ({ value, label, description, color = 
             <h1 className='text-5xl font-bold mb-3'>{value}</h1>
             <p className='text-md uppercase font-bold mb-1'>{label}</p>
             <p className='text-sm'>{description}</p>
+            <p>v1</p>
         </div>
     )
 }

@@ -6,6 +6,9 @@ import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import babel from "@rollup/plugin-babel";
 import babelPresetReact from "@babel/preset-react";
+import autoprefixer from "autoprefixer";
+import postcss from 'rollup-plugin-postcss';
+import css from 'rollup-plugin-import-css';
 
 const packageJson = require("./package.json");
 
@@ -25,6 +28,10 @@ export default [
       },
     ],
     plugins: [
+      postcss({
+        plugins: [autoprefixer()], // Add other PostCSS plugins as needed
+      }),
+      // css(), // Use default options
       peerDepsExternal(),
       resolve(),
       commonjs(),
