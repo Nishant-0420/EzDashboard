@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "ez-dashboard": "file:ez-dashboard-0.0.1.tgz",
+    "ez-dashboard": "file:ez-dashboard-1.0.0.tgz",
+    "flowbite-react": "^0.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

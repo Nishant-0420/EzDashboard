@@ -1,10 +1,16 @@
 import React from 'react';
-import {StatCard} from 'ez-dashboard';
+import { StatCard } from 'ez-dashboard';
+import { Button } from "flowbite-react";
 
 const App = () => {
   return (
-    <div>
-      <StatCard label={'Users'} description={'Some Description'} value={628}/>
+    <div className='m-10'>
+      <div className='grid grid-cols-4 gap-5'>
+        <StatCard label={'Users'} description={'Some Description'} value={628} />
+        <StatCard label={'Orders'} description={''} value={628} color='secondary' />
+        <StatCard label={'Products'} description={'Some Description'} value={93} />
+        <StatCard label={'Visits'} description={''} value={923} color='success' />
+      </div>
     </div>
   )
 }
