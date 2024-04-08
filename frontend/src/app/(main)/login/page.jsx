@@ -14,8 +14,8 @@ import {
   Stack,
   Container
 } from '@mantine/core';
- import { GoogleButton } from '../login/googleButton';
- import TwitterButton from './twitterButton';
+import { GoogleButton } from '../login/googleButton';
+import TwitterButton from './twitterButton';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
@@ -36,92 +36,108 @@ export function Login(props) {
     },
     onSubmit: (values) => {
       console.log(values);
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+          .then((response) => {
+            console.log(response.status);
+            if (response.status === 200) {
+              response.json()
+                .then(data => {
+                  console.log(data);
+                })
+            }
+          }).catch((err) => {
+            console.log(err);
+          })
+      })
     }
 
-    ,validationSchema: formValidationSchema,
+    , validationSchema: formValidationSchema,
   });
 
   return (
     <Container w={530}>
-    <Paper radius="md" p="xl" withBorder {...props}>
-      <Text size="lg" fw={500}>
-        Welcome to EzDashboard, {type} with
-      </Text>
+      <Paper radius="md" p="xl" withBorder {...props}>
+        <Text size="lg" fw={500}>
+          Welcome to EzDashboard, {type} with
+        </Text>
 
-      <Group grow mb="md" mt="md">
-        <GoogleButton radius="xl">Google</GoogleButton>
-        <TwitterButton radius="xl">Twitter</TwitterButton>
-      </Group>
+        <Group grow mb="md" mt="md">
+          <GoogleButton radius="xl">Google</GoogleButton>
+          <TwitterButton radius="xl">Twitter</TwitterButton>
+        </Group>
 
-      <Divider label="Or continue with email" labelPosition="center" my="lg" />
+        <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-      <form onSubmit={form.handleSubmit}>
-        <Stack>
-          {type === 'register' && (
+        <form onSubmit={form.handleSubmit}>
+          <Stack>
+            {type === 'register' && (
+              <TextInput
+                label="Name"
+                placeholder="Your name"
+                id='name'
+                value={form.values.name}
+                onChange={
+                  //(event) => form.setFieldValue('name', event.currentTarget.value),
+                  form.handleChange}
+                error={form.errors.name && 'Invalid name'}
+                radius="md"
+              />
+            )}
+
             <TextInput
-              label="Name"
-              placeholder="Your name"
-              id='name'
-              value={form.values.name}
+              required
+              label="Email"
+              placeholder="hello@mantine.dev"
+              id='email'
+              value={form.values.email}
               onChange={
-                 //(event) => form.setFieldValue('name', event.currentTarget.value),
-                 form.handleChange }
-              error={form.errors.name && 'Invalid name'}
-
+                // (event) => form.setFieldValue('email', event.currentTarget.value)
+                form.handleChange}
+              error={form.errors.email && 'Invalid email'}
               radius="md"
             />
-          )}
 
-          <TextInput
-            required
-            label="Email"
-            placeholder="hello@mantine.dev"
-            id='email'
-            value={form.values.email}
-            onChange={
-              // (event) => form.setFieldValue('email', event.currentTarget.value)
-              form.handleChange}
-            error={form.errors.email && 'Invalid email'}
-            radius="md"
-          />
-
-          <PasswordInput
-            required
-            label="Password"
-            placeholder="Your password"
-            id='password'
-            value={form.values.password}
-            onChange={
-              // (event) => form.setFieldValue('password', event.currentTarget.value)
-              form.handleChange
-            }
-            error={form.errors.password && 'Password should include at least 6 characters'}
-            radius="md"
-          />
-
-          {type === 'register' && (
-            <Checkbox
-              label="I accept terms and conditions"
-              checked={form.values.terms}
-              onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
+            <PasswordInput
+              required
+              label="Password"
+              placeholder="Your password"
+              id='password'
+              value={form.values.password}
+              onChange={
+                // (event) => form.setFieldValue('password', event.currentTarget.value)
+                form.handleChange
+              }
+              error={form.errors.password && 'Password should include at least 6 characters'}
+              radius="md"
             />
-          )}
-        </Stack>
 
-        <Group justify="space-between" mt="xl">
-          <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
-            {type === 'register'
-              ? 'Already have an account? Login'
-              : "Don't have an account? Register"}
-          </Anchor>
-          <Button type="submit" radius="xl">
-            {upperFirst(type)}
-          </Button>
-        </Group>
-      </form>
-    </Paper>
+            {type === 'register' && (
+              <Checkbox
+                label="I accept terms and conditions"
+                checked={form.values.terms}
+                onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
+              />
+            )}
+          </Stack>
+
+          <Group justify="space-between" mt="xl">
+            <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
+              {type === 'register'
+                ? 'Already have an account? Login'
+                : "Don't have an account? Register"}
+            </Anchor>
+            <Button type="submit" radius="xl">
+              {upperFirst(type)}
+            </Button>
+          </Group>
+        </form>
+      </Paper>
     </Container>
   );
 }
 
-export default Login ;
+export default Login;
