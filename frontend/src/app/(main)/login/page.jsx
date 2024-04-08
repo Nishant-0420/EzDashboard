@@ -1,6 +1,6 @@
 'use client';
 import { useToggle, upperFirst } from '@mantine/hooks';
-import { useForm } from '@mantine/form';
+// import { useForm } from '@mantine/form';
 import {
   TextInput,
   PasswordInput,
@@ -16,21 +16,29 @@ import {
 } from '@mantine/core';
  import { GoogleButton } from '../login/googleButton';
  import TwitterButton from './twitterButton';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 
+const formValidationSchema = yup.object().shape({
+  email: yup.string().email('Invalid email').required('Required'),
+  name: yup.string().required('Required'),
+  password: yup.string().min(6, 'Password should include at least 6 characters').required('Required'),
+
+})
 export function Login(props) {
   const [type, toggle] = useToggle(['login', 'register']);
-  const form = useForm({
+  const form = useFormik({
     initialValues: {
       email: '',
       name: '',
       password: '',
       terms: true,
     },
+    onSubmit: (values) => {
+      console.log(values);
+    }
 
-    validate: {
-      email: (val) => (/^\S+@\S+$/.test(val) ? null : 'Invalid email'),
-      password: (val) => (val.length <= 6 ? 'Password should include at least 6 characters' : null),
-    },
+    ,validationSchema: formValidationSchema,
   });
 
   return (
@@ -47,14 +55,19 @@ export function Login(props) {
 
       <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-      <form onSubmit={form.onSubmit(() => {})}>
+      <form onSubmit={form.handleSubmit}>
         <Stack>
           {type === 'register' && (
             <TextInput
               label="Name"
               placeholder="Your name"
+              id='name'
               value={form.values.name}
-              onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
+              onChange={
+                 //(event) => form.setFieldValue('name', event.currentTarget.value),
+                 form.handleChange }
+              error={form.errors.name && 'Invalid name'}
+
               radius="md"
             />
           )}
@@ -63,8 +76,11 @@ export function Login(props) {
             required
             label="Email"
             placeholder="hello@mantine.dev"
+            id='email'
             value={form.values.email}
-            onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
+            onChange={
+              // (event) => form.setFieldValue('email', event.currentTarget.value)
+              form.handleChange}
             error={form.errors.email && 'Invalid email'}
             radius="md"
           />
@@ -73,8 +89,12 @@ export function Login(props) {
             required
             label="Password"
             placeholder="Your password"
+            id='password'
             value={form.values.password}
-            onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
+            onChange={
+              // (event) => form.setFieldValue('password', event.currentTarget.value)
+              form.handleChange
+            }
             error={form.errors.password && 'Password should include at least 6 characters'}
             radius="md"
           />
