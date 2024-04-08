@@ -72,6 +72,9 @@
     width: 100%;
   }
 }
+.r{
+  border-radius : 20px;
+}
 
 
 .wrapper {
@@ -79,7 +82,7 @@
   align-items: center;
   padding: calc(var(--mantine-spacing-xl) * 2);
   border-radius: var(--mantine-radius-md);
-  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+  background: linear-gradient(135deg, #bd0cb2, #250244);
   border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
 
   @media (max-width: $mantine-breakpoint-sm) {

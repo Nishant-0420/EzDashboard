@@ -39,7 +39,9 @@ const Home = () => {
                 gradient={{  from: 'cyan', to: 'violet', deg: 271 }}
                 size="xl"
                 radius={15}
-                className={classes.control,classes.r}
+                // style={}
+                style={{borderRadius: 15}}
+                className={classes.control}
                 mt={40}
               >
                 Get started
