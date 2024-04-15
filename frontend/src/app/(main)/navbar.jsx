@@ -5,8 +5,8 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './Navbar.module.css';
 
 const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
+  { link: '/about' , label: 'About' },
+  { link: '/contact', label: 'Contact' },
   { link: '/learn', label: 'Learn' },
   { link: '/community', label: 'Community' },
 ];

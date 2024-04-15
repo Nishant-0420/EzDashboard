@@ -51,8 +51,7 @@ export function Navbar() {
     <nav className={classes.navbar}>
       <div className={classes.header}>
         <Group justify="space-between" >
-          <Title order={2}>EzDashboard </Title>
-          
+          <Title order={2}>EzDashboard </Title>         
         </Group>
       </div>
 

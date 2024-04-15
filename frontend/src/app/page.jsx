@@ -11,7 +11,7 @@ import Footer from './Footer';
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header/>
       <div className={classes.root}>
         <Container size="lg">
           <div className={classes.inner}>
