@@ -11,7 +11,7 @@ import Footer from './Footer';
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header/>
       <div className={classes.root}>
         <Container size="lg">
           <div className={classes.inner}>
@@ -22,7 +22,7 @@ const Home = () => {
                   component="span"
                   inherit
                   variant="gradient"
-                  gradient={{ from: 'pink', to: 'yellow' }}
+                  gradient={{  from: 'cyan', to: 'violet', deg: 271 }}
                 >
                   fully featured
                 </Text>{' '}
@@ -30,7 +30,7 @@ const Home = () => {
               </Title>
 
               <Text className={classes.description} mt={30}>
-                Build full functional accessible web applications with ease – Mantine includes more
+                Build functional accessible web applications with ease – Mantine includes more
                 than 100 customizable components and hooks to cover you in any situation
               </Text>
 

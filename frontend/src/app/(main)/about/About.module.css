@@ -1,0 +1,61 @@
+/* about.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .paper {
+    background-color: #f8eaea;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .paper:hover {
+    transform: scale(1.05);
+    
+  }
+  
+  .sectionTitle {
+    margin-bottom: 20px;
+    color: #181818;
+  }
+  
+  .paragraph {
+    margin-bottom: 20px;
+    color: #2e2c2c;
+  }
+  
+  .team {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .teamMember {
+    margin: 0 20px;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .memberName {
+    color:  #181818;
+  }
+  
+  .memberPosition {
+    color: #3c3a3a;
+  }
+  
+  .button {
+    margin-top: 40px;
+  }
+  

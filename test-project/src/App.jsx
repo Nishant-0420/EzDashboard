@@ -1,6 +1,5 @@
 import React from 'react';
 import { StatCard } from 'ez-dashboard';
-import { Button } from "flowbite-react";
 
 const App = () => {
   return (
@@ -9,7 +8,7 @@ const App = () => {
         <StatCard label={'Users'} description={'Some Description'} value={628} />
         <StatCard label={'Orders'} description={''} value={628} color='secondary' />
         <StatCard label={'Products'} description={'Some Description'} value={93} />
-        <StatCard label={'Visits'} description={''} value={923} color='success' />
+        <StatCard label={'Visits'} description={''} value={923} color='primary' />
       </div>
     </div>
   )
