@@ -5,6 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Header.module.css'
+import { useRouter } from 'next/navigation';
 
 const links = [
     { link: '/about', label: 'Feature' },
@@ -14,6 +15,8 @@ const links = [
   ];
 
 const Header = () => {
+
+    const router = useRouter();
     const [opened, { toggle }] = useDisclosure(false);
     const items = links.map((link) => (
         <a
@@ -32,7 +35,7 @@ const Header = () => {
                 <Group>
                     <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
                     <div style={{ }}>
-                        <Image src='/image/logo.png' alt='library logo' style={{height: 85,width: 250}}/>
+                        <Image onClick={() => router.push('/')} src='/image/logo.png' alt='library logo' style={{height: 85,width: 250}}/>
                         
                     </div>
                     

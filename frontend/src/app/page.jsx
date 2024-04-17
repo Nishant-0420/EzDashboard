@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react'
 import classes from './Home.module.css'
 import { Container, Title, Text, Button,Paper } from '@mantine/core';
@@ -7,8 +7,10 @@ import FeaturesCards from './FeaturesCards';
 import {  TextInput, Image } from '@mantine/core';
 // import image from './image.svg';
 import Footer from './Footer';
+import { useRouter } from 'next/navigation';
 
 const Home = () => {
+  const router = useRouter();
   return (
     <>
       <Header/>
@@ -43,6 +45,7 @@ const Home = () => {
                 style={{borderRadius: 15}}
                 className={classes.control}
                 mt={40}
+                onClick={() => router.push('/docs/api-reference')}
               >
                 Get started
               </Button>
