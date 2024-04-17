@@ -1,5 +1,5 @@
 import React from 'react';
-import { cssColors, tailwindThemeClasses } from '../themes';
+import { cssColors, tailwindThemeClasses } from '../../themes/themes';
 
 interface TextInputProps {
   label: string;
