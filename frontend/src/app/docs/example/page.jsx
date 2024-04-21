@@ -1,12 +1,12 @@
-import { Center, Title } from '@mantine/core'
+'use client'
 import React from 'react'
+
 
 const Example = () => {
   return (
-    <div>
-        
-        <Title order={1} align={'center'} mt={50}> coming soon</Title>
+    <div> Example 
     </div>
+    
   )
 }
 

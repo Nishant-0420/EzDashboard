@@ -4,6 +4,7 @@ import Navbar from './navbar';
 import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Header from './header';
+import AffixComponent from '../AffixComponent';
 
 const MainLayout = ({ children }) => {
 
@@ -11,7 +12,7 @@ const MainLayout = ({ children }) => {
 
     return (
         <>
-
+            <AffixComponent />
 
             <AppShell
                 header={{ height: 60 }}
@@ -20,7 +21,7 @@ const MainLayout = ({ children }) => {
                 layout='alt'
             >
                 <AppShell.Header>
-                        <Header />
+                    <Header />
                 </AppShell.Header>
                 <AppShell.Navbar>
                     <Navbar />

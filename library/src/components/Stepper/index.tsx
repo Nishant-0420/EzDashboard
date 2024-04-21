@@ -21,7 +21,7 @@ const Stepper: React.FC<StepperProps> = ({ steps }: { steps: StepData[] }) => {
         <li key={index} className="flex items-center gap-x-2 shrink basis-0 flex-1 group">
           <div className="min-w-7 min-h-7 inline-flex justify-center items-center text-xs align-middle">
             <span className="size-7 flex justify-center items-center flex-shrink-0 bg-gray-800 font-medium text-white rounded-full dark:bg-white dark:text-gray-800">
-              {step.icon ?? index + 1}
+              {/* {step.icon ?? index + 1} */}
             </span>
             <div className="ms-2 stext-sm dark:text-white">
               <h4 className='text-md text-gray-800'>{step.title}</h4>
