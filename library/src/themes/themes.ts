@@ -12,7 +12,14 @@ const tailwindThemeClasses = {
         md:'rounded-md',
         lg:'rounded-lg',
         xl:'rounded-full',
-    },  
+    }, 
+    padding:{
+        xl:  'px-10 py-5',
+        lg: 'px-5 py-3',
+        md:'px-5 py-3',
+        sm:'px-3 py-2',
+        xs:'px-2 py-1',
+    }, 
 
     sizes:{
         xs:'size-2',
@@ -27,6 +34,14 @@ const tailwindThemeClasses = {
         light: 'text-white',
         dark: 'text-black',
     },
+    textsize: {
+        xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-md',
+        lg: 'text-lg',
+        xl: 'text-xl',
+    }
+
 }
 
 const cssColors = {

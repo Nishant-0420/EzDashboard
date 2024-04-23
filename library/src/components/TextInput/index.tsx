@@ -11,7 +11,8 @@ interface TextInputProps {
   placeholder: string;
   disabled: boolean;
   radius?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined;
-  textcolor?:'light'|'dark'|undefined;  
+  textcolor?:'light'|'dark'|undefined; 
+  textsize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined; 
 
 }
 
@@ -26,6 +27,7 @@ const TextInput: React.FC<TextInputProps> = ({
   disabled = false,
   radius = 'none',
   textcolor = 'light',
+  textsize = 'md',
 
 }) => {
   return (
@@ -36,7 +38,7 @@ const TextInput: React.FC<TextInputProps> = ({
         style={{ border: `1px solid ${cssColors.colors[color]}`, 
                  backgroundColor: cssColors.colors[color],}}
         type="text"
-        className={`py-3 px-4 border  ${tailwindThemeClasses.radius[radius ]} text-sm focus:border-blue-500 focus:ring-blue-500 ${disabled ? 'opacity-50 pointer-events-none' : ''
+        className={`${tailwindThemeClasses.padding[size]} border  ${tailwindThemeClasses.radius[radius ]}${tailwindThemeClasses.textsize[textsize]} focus:border-blue-500 focus:ring-blue-500 ${disabled ? 'opacity-50 pointer-events-none' : ''
           } dark:bg-slate-900 dark:border-gray-700 ${tailwindThemeClasses.textcolor[textcolor]} dark:focus:ring-gray-600`}
         placeholder={placeholder}
         disabled={disabled}
