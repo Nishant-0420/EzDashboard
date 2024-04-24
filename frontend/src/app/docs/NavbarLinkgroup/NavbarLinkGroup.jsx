@@ -4,6 +4,7 @@ import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, rem } from '@man
 import { IconCalendarStats, IconChevronRight } from '@tabler/icons-react';
 import classes from './NavbarLinksGroup.module.css';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 
 
@@ -13,11 +14,11 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links, link }) 
   const [opened, setOpened] = useState(initiallyOpened || false);
   const items = (hasLinks ? links : []).map((link) => (
     <Text
-      component="a"
+      component={Link}
       className={classes.link}
       href={link.link}
       key={link.label}
-      onClick={(event) => event.preventDefault()}
+      // onClick={(event) => event.preventDefault()}
     >
       {link.label}
     </Text>

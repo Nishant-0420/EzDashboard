@@ -38,7 +38,7 @@ const TextInput: React.FC<TextInputProps> = ({
         style={{ border: `1px solid ${cssColors.colors[color]}`, 
                  backgroundColor: cssColors.colors[color],}}
         type="text"
-        className={`${tailwindThemeClasses.padding[size]} border  ${tailwindThemeClasses.radius[radius ]}${tailwindThemeClasses.textsize[textsize]} focus:border-blue-500 focus:ring-blue-500 ${disabled ? 'opacity-50 pointer-events-none' : ''
+        className={`${tailwindThemeClasses.padding[size]} border  ${tailwindThemeClasses.radius[radius]} ${tailwindThemeClasses.textsize[textsize]} focus:border-blue-500 focus:ring-blue-500 ${disabled ? 'opacity-50 pointer-events-none' : ''
           } dark:bg-slate-900 dark:border-gray-700 ${tailwindThemeClasses.textcolor[textcolor]} dark:focus:ring-gray-600`}
         placeholder={placeholder}
         disabled={disabled}
