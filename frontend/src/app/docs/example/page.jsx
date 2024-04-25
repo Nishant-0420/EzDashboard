@@ -328,6 +328,7 @@ const Example = () => {
           <CodeBlock
             text={`import  { TextInput }  from  'ez-dashboard';`}
             language={'jsx'}
+            showLineNumbers={false}
             theme={dracula}
             wrapLines />
         </Text>
@@ -370,7 +371,150 @@ const Example = () => {
       <br />
       <Image src="/image/textinput2.png" alt="textinput image with props" style={{ height: '100px', width: '230px' }} />
       </div>
-
+      <br />
+      <hr />
+      <br/>
+      {/* // CheckBox component */}
+      <div style={{ marginLeft: 70, marginRight: 90 }}>
+        <Title order={1}>CheckBox</Title>
+        <br />
+        <Text >
+          CheckBox component is used to select multiple options at a time.
+        </Text>
+        <Text >
+          To use the CheckBox component, you need to import it from the ez-dashboard package.
+          <br />
+          <br />
+          <CodeBlock
+            text={`import  { CheckBox }  from  'ez-dashboard';`}
+            language={'jsx'}
+            showLineNumbers={false}
+            theme={dracula}
+            wrapLines />
+        </Text>
+        <Title order={2}>Usage</Title>
+        <br />
+        <CodeBlock
+            text={`import  { CheckBox }  from  'ez-dashboard';
+const checkboxOptions = [
+              { label: 'Option 1', value: 'Option 1' },
+              { label: 'Option 2', value: 'Option 2' },
+              { label: 'Option 3', value: 'Option 3' }
+            ];
+<Checkbox options={checkboxOptions} onChange={(value) => console.log(value)} size='lg' />`}
+            language={'jsx'}
+            showLineNumbers={false}
+            theme={dracula}
+            wrapLines />
+        <br />
+        <Text>** Should have to pass an array in checkboxOptions </Text>
+        <br />
+        <Image src="/image/checkbox1.png" alt="checkbox image" style={{ height: '210px', width: '200px' }} />
+        <br />
+        <Title order={2}>Props</Title>
+        <br />
+        <Text >
+          The CheckBox component has the following props: <br />
+          * options <br />
+          * onchange <br />
+          * labelPosition <br />  
+          * description <br />
+          * size <br />
+          * color <br />
+          * variant <br />
+          * radius <br />
+        </Text>
+        <br />
+        <Text>
+        <CodeBlock
+        text={`import  { CheckBox }  from  'ez-dashboard';
+const checkboxOptions = [
+              { label: 'Option 1', value: 'Option 1' },
+              { label: 'Option 2', value: 'Option 2' },
+              { label: 'Option 3', value: 'Option 3' }
+            ];
+<Checkbox options={checkboxOptions} onChange={(value) => console.log(value)} color='success' />`}
+        language='jsx'
+        theme={dracula}
+        showLineNumbers={false}
+        wrapLines 
+      />
+      </Text>
+      <br />
+      <Image src="/image/checkbox2.png" alt="checkbox image with props" style={{ height: '190px', width: '180px' }} /> 
+      </div>
+      <br />
+      <hr />
+      <br />
+      {/* // Radio component */}
+      <div style={{ marginLeft: 70, marginRight: 90 }}>
+        <Title order={1}>Radio</Title>
+        <br />
+        <Text >
+          Radio component is used to select one option at a time.
+        </Text>
+        <Text >
+          To use the Radio component, you need to import it from the ez-dashboard package.
+          <br />
+          <br />
+          <CodeBlock
+            text={`import  { Radio }  from  'ez-dashboard';`}
+            language={'jsx'}
+            showLineNumbers={false}
+            theme={dracula}
+            wrapLines />
+        </Text>
+        <Title order={2}>Usage</Title>
+        <br />
+        <CodeBlock
+            text={`import  { Radio }  from  'ez-dashboard';
+            const radioOptions = [
+              { label: 'Option 1', value: 'Option 1' },
+              { label: 'Option 2', value: 'Option 2' },
+              { label: 'Option 3', value: 'Option 3' }
+            ];
+            <Radio options={radioOptions} onChange={(value) => console.log(value)}  size='xl' />`}
+            language={'jsx'}
+            showLineNumbers={false}
+            theme={dracula}
+            wrapLines />
+        <br />
+        <Text>** Should have to pass an array in radioOptions </Text>
+        <br />
+        <Image src="/image/radio1.png" alt="radio image" style={{ height: '200px', width: '200px' }} />
+        <br />
+        <Title order={2}>Props</Title>
+        <br />
+        <Text >
+          The Radio component has the following props: <br />
+          * options <br />
+          * onchange <br />
+          * labelPosition <br />  
+          * description <br />
+          * size <br />
+          * color <br />
+          * variant <br />
+          * radius <br />
+        </Text>
+        <br />
+        <Text>
+        <CodeBlock
+        text={`import  { Radio }  from  'ez-dashboard';
+        const radioOptions = [
+          { label: 'Option 1', value: 'Option 1' },
+          { label: 'Option 2', value: 'Option 2' },
+          { label: 'Option 3', value: 'Option 3' }
+        ];
+        <Radio options={radioOptions} onChange={(value) => console.log(value)}  color='success'/>`}
+        language='jsx'
+        theme={dracula}
+        showLineNumbers={false}
+        wrapLines
+      />
+      </Text>
+      <br />
+      <Image src="/image/radio2.png" alt="radio image with props" style={{ height: '170px', width: '170px' }} />
+        </div>
         
 
 

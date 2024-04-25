@@ -29,6 +29,16 @@ const tailwindThemeClasses = {
         xl:'size-5',
 
     },
+    accentcolor: {
+        primary: 'accent-blue-500',
+        secondary: 'accent-yellow-500',
+        success: 'accent-green-500',
+        warning: 'accent-yellow-500',
+        danger: 'accent-red-500',
+        info: 'accent-blue-500',
+        dark: 'accent-gray-500',
+        light: 'accent-white',
+    },
 
     textcolor: {
         light: 'text-white',
