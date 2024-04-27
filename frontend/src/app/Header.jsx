@@ -3,7 +3,7 @@ import React from 'react'
 import { Autocomplete, Group, Burger, rem, opened, toggle, items ,Image} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
-import { MantineLogo } from '@mantinex/mantine-logo';
+
 import classes from './Header.module.css'
 import { useRouter } from 'next/navigation';
 

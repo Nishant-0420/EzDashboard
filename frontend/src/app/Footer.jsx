@@ -2,7 +2,7 @@
 import React from 'react'
 import { Text, Container, ActionIcon, Group,Image, rem,groups } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { MantineLogo } from '@mantinex/mantine-logo';
+
 import classes from './Footer.module.css'
 
 const data = [
