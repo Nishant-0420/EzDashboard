@@ -10,7 +10,6 @@ import {
 } from '@tabler/icons-react';
 import { UserButton } from './UserButton/UserButton';
 import { LinksGroup } from './NavbarLinkgroup/NavbarLinkGroup';
-import { Logo } from './logo';
 import classes from './navbarNested.module.css';
 
 const mockdata = [
@@ -25,13 +24,17 @@ const mockdata = [
     icon: IconCalendarStats,
     link: '/docs/Release-note',
     links: [
-      { label: 'Upcoming releases', link: '/' },
+      { label: 'Upcoming releases', link: '/'},
       { label: 'Previous releases', link: '/' },
       { label: 'Releases schedule', link: '/' },
     ],
   },
   { label: 'Data Integration ', icon: IconPresentationAnalytics, link: '/docs/data-integration' },
-  { label: 'Example ', icon: IconFileAnalytics, link: '/docs/example' },
+  { label: 'Example ', icon: IconFileAnalytics, link: '/docs/example',
+    links: [
+      { label: 'Alert', link: '/docs/example/alert' },
+      { label: 'Progress Bar', link: '/docs/example/progressbar' },
+    ]},
   { label: 'FAQs Trrobleshooting', icon: IconAdjustments, link: '/docs/Faqs-troubleshooting' },
   {
     label: 'Getting Started ',

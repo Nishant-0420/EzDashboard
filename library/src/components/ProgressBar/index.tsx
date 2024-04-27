@@ -9,7 +9,7 @@ interface ProgressBarProps {
 }
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ value, radius='md', color='primary', size='md' }) => {
-  const tooltipText = `Progress: ${value}%`;
+  const tooltipText =`Progress: ${value}%`;
 
   
   const progressValue = Math.min(value, 100);
@@ -17,13 +17,14 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ value, radius='md', color='pr
   return (
     <div className="relative pt-1">
       <div className="flex mb-2 items-center justify-between">
-        <div>
-          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white dark:text-gray-800 bg-blue-500 dark:bg-blue-300">
+        <div style={{backgroundColor:cssColors.colors[color]}} className={` ${tailwindThemeClasses.radius[radius ]}`} >
+       
+          <span className ="text-xs font-semibold inline-block py-1 px-2 uppercase text-white dark:text-gray-800 ">
             {tooltipText}
           </span>
         </div>
-        <div className="text-right">
-          <span className="text-xs font-semibold inline-block text-blue-500 dark:text-blue-300">
+        <div style={{ color:cssColors.colors[color]}} className ="text-right">
+          <span className="text-xs font-semibold inline-block  ">
             {progressValue}%
           </span>
         </div>

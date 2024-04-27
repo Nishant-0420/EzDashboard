@@ -1,8 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { Container, Group, Burger, Title } from '@mantine/core';
+import { Container, Group, Burger, Title, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Navbar.module.css';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const links = [
   { link: '/about' , label: 'About' },
@@ -13,27 +15,25 @@ const links = [
 
 export function Navbar() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const router = useRouter();
+  console.log(window.location.pathname);
 
   const items = links.map((link) => (
-    <a
+    <Button
+    component={Link}
       key={link.label}
       href={link.link}
       className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
+      variant={window.location.pathname === link.link ? 'filled' : 'transparent'}
     >
       {link.label}
-    </a>
+    </Button>
   ));
 
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Title order={3}>EzDashboard</Title>
+        <Title order={3} onClick={() => router.push('/')}>EzDashboard</Title>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>

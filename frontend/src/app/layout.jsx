@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { MantineProvider, createTheme } from "@mantine/core";
+import { Affix, MantineProvider, createTheme } from "@mantine/core";
 import '@mantine/core/styles.css';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MantineProvider theme={theme} defaultColorScheme="dark">
+        <MantineProvider theme={theme} defaultColorScheme="dark"> 
           {children}
         </MantineProvider>
       </body>

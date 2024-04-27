@@ -1,17 +1,18 @@
-import React , { JSXElementConstructor } from 'react';
+import React from 'react';
+
 
 interface StepData {
-    icon?: JSXElementConstructor<any> | null;
-    title: string;
-    subtitle?: string | null;
-    content: JSXElementConstructor<any>;
+  icon?: JSX.Element | null;
+  title: string;
+  subtitle?: string | null;
+  content: JSX.Element;
 }
 
 interface StepperProps {
-    steps: StepData[];
+  steps: StepData[];
 }
 
-const Stepper: React.FC<StepperProps> = ({ steps }: { steps: StepData[] }) => {
+const Stepper: React.FC<StepperProps> = ({ steps }) => {
 
 
   return (
@@ -31,9 +32,9 @@ const Stepper: React.FC<StepperProps> = ({ steps }: { steps: StepData[] }) => {
             </div>
 
           </div>
-          {/* <div className="w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-gray-700">
-            {step.content}
-          </div> */}
+          <div className="w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-gray-700">
+            
+          </div>
         </li>
       ))}
     </ul>

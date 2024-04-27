@@ -1,14 +1,21 @@
-
+'use client'
 import React from 'react'
 import classes from './Home.module.css'
-import { Container, Title, Text, Button,Paper } from '@mantine/core';
+import { Container, Title, Text, Button, Affix} from '@mantine/core';
 import Header from './Header';
 import FeaturesCards from './FeaturesCards';
 import {  TextInput, Image } from '@mantine/core';
 // import image from './image.svg';
 import Footer from './Footer';
+import { useRouter } from 'next/navigation';
+import AffixComponent from './AffixComponent';
+// import { IconArrowUp } from '@tabler/icons-react';
+// import { useWindowScroll } from '@mantine/hooks';
 
 const Home = () => {
+  const router = useRouter();
+  // const [scroll, scrollTo] = useWindowScroll();
+  
   return (
     <>
       <Header/>
@@ -43,6 +50,7 @@ const Home = () => {
                 style={{borderRadius: 15}}
                 className={classes.control}
                 mt={40}
+                onClick={() => router.push('/docs/api-reference')}
               >
                 Get started
               </Button>
@@ -76,6 +84,20 @@ const Home = () => {
       <Image src="/image/banner-image.png" alt="banner" />
     </div>
       <Footer/>
+      <AffixComponent/>
+      {/* <Affix position={{ bottom: 20, right: 20 }}>
+        <Transition transition="slide-up" mounted={scroll.y > 0}>
+          {(transitionStyles) => (
+            <Button
+              leftSection={<IconArrowUp style={{ width:16 , height: 16 }} />}
+              style={transitionStyles}
+              onClick={() => scrollTo({ y: 0 })}
+            >
+              Scroll to top
+            </Button>
+          )}
+        </Transition>
+      </Affix> */}
     </>
   )
 

@@ -1,23 +1,19 @@
 /* about.module.css */
 
 .container {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
+
   }
   
   .paper {
-    background-color: #f8eaea;
+    background-color: #f1e9e9;
     border-radius: 16px;
     padding: 40px;
     text-align: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .paper:hover {
-    transform: scale(1.05);
-    
   }
   
   .sectionTitle {
