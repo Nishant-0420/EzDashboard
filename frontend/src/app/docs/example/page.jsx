@@ -1978,7 +1978,7 @@ const  radialData= {"id": string,
             Bump component is used to show the distribution of data.
           </Text>
           <Text >
-            To use the Bump component, you need to import it from the ez-dashboard package.
+            To use the Bump component , you need to import it from the ez-dashboard package.
             <br />
             <br />
             <CodeBlock
