@@ -3,16 +3,16 @@ import React from 'react'
 import { Title, Text } from '@mantine/core'
 import { CodeBlock, dracula } from 'react-code-blocks'
 
-const gettingStarted = () => {
+const Document = () => {
   return (
     <div>
-       <Title order={1}>What is EzDashboard?</Title>
+       <Title order={1}>Overview </Title>
       <br />
       <Text>
        EzDashboard is a powerful React library designed to streamline the creation of professional-looking dashboards. With EzDashboard, you can effortlessly construct visually appealing and data-driven interfaces that empower informed decision-making. By leveraging pre-built components and a flexible design system, EzDashboard empowers developers of all skill levels to rapidly prototype and build exceptional dashboards.
       </Text>
         <br />
-        <Title order={1}>What we do?</Title>
+        <Title order={1}>Motivation</Title>
         <br />
         <ul>
             <li>
@@ -89,11 +89,9 @@ const gettingStarted = () => {
         </li>
     </ul>
     <br/>
-    <Title order={1}> Customization</Title>
-    
 
     </div>
   )
 }
 
-export default  gettingStarted;
+export default  Document
