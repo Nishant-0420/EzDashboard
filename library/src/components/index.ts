@@ -15,3 +15,6 @@ export { default as LineChart } from './LineChart';
 export { default as RadialBar } from './RadialBar';
 export { default as HeatMap } from './HeatMap';
 export { default as Bump} from './Bump';
+export { default as PieChart } from './PieChart';
+export { default as Calendar } from './Calendar';
+export {default as ChoroplethMap} from './ChoroplethMap';

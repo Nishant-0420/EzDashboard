@@ -9,7 +9,7 @@ const Example = () => {
     <div>
       {/* // Alert component */}
       <div style={{ marginLeft: 70, marginRight: 90 }} >
-        <Title order={1}>Alert</Title>
+        <u><Title order={1}>Alert</Title></u>
         <br />
         <Text  >
           Alert component is used to display important messages to users. It can be used to show
@@ -27,12 +27,13 @@ const Example = () => {
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
-            {`import { Alert } from 'ez-dashboard';
+          <CodeBlock
+          text={`import { Alert } from 'ez-dashboard';
 <Alert title={'Alert'} description={'Alert message'}/>`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/alert2.png" alt="alert box" style={{ height: '120px', width: '300px' }} />
         <br />
@@ -44,18 +45,19 @@ const Example = () => {
           * description
         </Text>
         <br />
-        <pre >
-          <code>
-            {`<Alert title={'Alert'} description={'Alert message'}/>`}
-          </code>
-        </pre>
+        <CodeBlock
+        text={`<Alert title={'Alert'} description={'Alert message'}/>`}
+        language={'jsx'}
+        theme={dracula}
+        showLineNumbers={false}
+        wrapLines />
         <br />
         <Image src="/image/alert2.png" alt="alert box img with props" style={{ height: '120px', width: '300px' }} />
       </div>
       <br /><hr></hr><br />
       {/* Statcard  */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>StatCard</Title>
+        <u><Title order={1}>StatCard</Title></u>
         <br />
         <Text >
           StatCard component is used to display important statistics information to users. It can be used to show
@@ -67,17 +69,19 @@ const Example = () => {
           <CodeBlock
             text={`import  { StatCard }  from  'ez-dashboard';`}
             language={'jsx'}
+            showLineNumbers={false}
             theme={dracula}
             wrapLines />
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
-            {`import { StatCard } from 'ez-dashboard';
+        <CodeBlock
+          text= {`import { StatCard } from 'ez-dashboard';
 <StatCard  value="100" description={'card description'}  label={'name'} color='primary'/>`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/statcard.png" alt="statcard image" style={{ height: '190px', width: '290px' }} />
         <br />
@@ -94,7 +98,7 @@ const Example = () => {
       <br /><hr></hr><br />
       {/* // Table component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>Table</Title>
+        <u><Title order={1}>Table</Title></u>
         <br />
         <Text >
           Table component is used to display data in tabular format.
@@ -111,16 +115,17 @@ const Example = () => {
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
-            {`import { Table } from 'ez-dashboard';
+        <CodeBlock
+        text={`import { Table } from 'ez-dashboard';
 <Table data={[{"id": 1,"name": "Apple","price": 1.25,},
               {"id": 2,"name": "Banana","price": 0.75,},
               {"id": 3,"name": "JD","price": 250,}]}
-     alignHeading='center'
-     alignData='center' />`}
-          </code>
-        </pre>
+alignHeading='center'
+alignData='center' />`}
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/table.png" alt="table image" style={{ height: '220px', width: '380px' }} />
         <br />
@@ -138,7 +143,7 @@ const Example = () => {
       <br />
       {/* // Progressbar component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>ProgressBar</Title>
+        <u><Title order={1}>ProgressBar</Title></u>
         <br />
         <Text >
           ProgressBar component is used to display the progress of a task.
@@ -150,17 +155,20 @@ const Example = () => {
           <CodeBlock
             text={`import  { ProgressBar }  from  'ez-dashboard';`}
             language={'jsx'}
+            showLineNumbers={false}
             theme={dracula}
             wrapLines />
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
+        <CodeBlock
+          text=
             {`import { ProgressBar } from 'ez-dashboard';
 <ProgressBar value={69} />`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/progressbar1.png" alt="progressbar image" style={{ height: '90px', width: '410px' }} />
         <br />
@@ -173,12 +181,14 @@ const Example = () => {
           * Radius <br />
         </Text>
         <br />
-        <pre >
-          <code>
+        <CodeBlock
+          text=
             {`import { ProgressBar } from 'ez-dashboard';
 <ProgressBar value={69} color='success' radius='xl'/>`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/progressbar2.png" alt="progressbar image with props" style={{ height: '90px', width: '410px' }} />
       </div>
@@ -187,7 +197,7 @@ const Example = () => {
       <br />
       {/* // Button component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>Button</Title>
+        <u><Title order={1}>Button</Title></u>
         <br />
         <Text >
           Button component is used to trigger an action.
@@ -199,18 +209,20 @@ const Example = () => {
           <CodeBlock
             text={`import  { Button }  from  'ez-dashboard';`}
             language={'jsx'}
+            showLineNumbers={false}
             theme={dracula}
             wrapLines />
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
+        <CodeBlock
+          text=
             {`import { Button } from 'ez-dashboard
-<Button variant='filled'/>';
-            `}
-          </code>
-        </pre>
+<Button variant='filled'/>`}
+          language={'jsx'}  
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />      
         <br />
         <Image src="/image/button1.png" alt="button image" style={{ height: '90px', width: '160px' }} />
         <br />
@@ -224,12 +236,14 @@ const Example = () => {
           * color <br />
         </Text>
         <br />
-        <pre >
-          <code>
+        <CodeBlock
+          text=
             {`import { Button } from 'ez-dashboard';
 <Button variant='filled' size='xl' radius='xl' color='success'/>`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/button2.png" alt="button with props" style={{ height: '100px', width: '180px' }} />
       </div>
@@ -238,7 +252,7 @@ const Example = () => {
       <br />
       {/* Avatar component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>Avatar</Title>
+        <u><Title order={1}>Avatar</Title></u>
         <br />
         <Text >
           Avatar component is used to display user profile images.
@@ -250,17 +264,20 @@ const Example = () => {
           <CodeBlock
             text={`import  { Avatar }  from  'ez-dashboard';`}
             language={'jsx'}
+            showLineNumbers={false}
             theme={dracula}
             wrapLines />
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
+        <CodeBlock
+          text=
             {`import { Avatar } from 'ez-dashboard';
 <Avatar src={'https://www.w3schools.com/howto/img_avatar.png'} size='lg' alt='avatar profile image' />`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />
         <br />
         <Image src="/image/avatar.png" alt="avatar" style={{ height: '90px', width: '90px' }} />
         <br />
@@ -277,7 +294,7 @@ const Example = () => {
       <br />
       {/* // Link component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>Link</Title>
+        <u><Title order={1}>Link</Title></u>
         <br />
         <Text >
           Link component is used to navigate to another page.
@@ -289,17 +306,20 @@ const Example = () => {
           <CodeBlock
             text={`import  { Link }  from  'ez-dashboard';`}
             language={'jsx'}
+            showLineNumbers={false}
             theme={dracula}
             wrapLines />
         </Text>
         <Title order={2}>Usage</Title>
         <br />
-        <pre >
-          <code>
+        <CodeBlock
+        text=
             {`import { Link } from 'ez-dashboard';
 <Links links={[{text:'GOOGLE',url:'https://www.google.com'}]} />`}
-          </code>
-        </pre>
+          language={'jsx'}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines />         
         <br />
         <Image src="/image/links.png" alt="link image" style={{ height: '90px', width: '180px' }} />
         <br />
@@ -316,7 +336,7 @@ const Example = () => {
       <br />
       {/* // textinput component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>TextInput</Title>
+        <u><Title order={1}>TextInput</Title></u>
         <br />
         <Text >
           TextInput component is used to take user input.
@@ -376,7 +396,7 @@ const Example = () => {
       <br />
       {/* // CheckBox component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>CheckBox</Title>
+        <u><Title order={1}>CheckBox</Title></u>
         <br />
         <Text >
           CheckBox component is used to select multiple options at a time.
@@ -448,7 +468,7 @@ const checkboxOptions = [
       <br />
       {/* // Radio component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>Radio</Title>
+        <u><Title order={1}>Radio</Title></u>
         <br />
         <Text >
           Radio component is used to select one option at a time.
@@ -520,7 +540,7 @@ const checkboxOptions = [
       <br />
       {/* // Stepper component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>Stepper</Title>
+        <u><Title order={1}>Stepper</Title></u>
         <br />
         <Text >
           Stepper component is used to show the progress of a task.
@@ -538,6 +558,7 @@ const checkboxOptions = [
         </Text>
         <Title order={2}>Usage</Title>
         <br />
+        <u><Text>Example data</Text></u>
         <CodeBlock
           text={`import  { Stepper }  from  'ez-dashboard';
 const stepsData = [
@@ -585,7 +606,7 @@ const stepsData = [
       <br />
       {/* // ScatterPlot component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>ScatterPlot</Title>
+        <u><Title order={1}>ScatterPlot</Title></u>
         <br />
         <Text >
           ScatterPlot component is used to show the distribution of data.
@@ -617,6 +638,7 @@ const ScatterData ={"id": string,
           theme={dracula}
           wrapLines />
         <br />
+        <u><Text>Example data</Text></u>
         <ScrollArea h={200} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
         ScatterData=
         {
@@ -1664,7 +1686,7 @@ const ScatterData ={"id": string,
       <br />
       {/* // LineChart component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>LineChart</Title>
+        <u><Title order={1}>LineChart</Title></u>
         <br />
         <Text >
           LineChart component is used to show the trend of data.
@@ -1697,6 +1719,7 @@ const linechartdata = {"id": string,
           theme={dracula}
           wrapLines />
         <br />
+        <u><Text>Example data</Text></u>
         <ScrollArea h={200} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
         linechartdata=
         {
@@ -1810,7 +1833,7 @@ const linechartdata = {"id": string,
       <br />
       {/* // RadialBar component */}
       <div style={{ marginLeft: 70, marginRight: 90 }}>
-        <Title order={1}>RadialBar</Title>
+        <u><Title order={1}>RadialBar</Title></u>
         <br />
         <Text >
           RadialBar component is used to show the progress of a task.
@@ -1843,6 +1866,7 @@ const  radialData= {"id": string,
           theme={dracula}
           wrapLines />
         <br />
+        <u><Text>Example data</Text></u>
         <ScrollArea h={200} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
         radialData=
         {
@@ -1972,13 +1996,13 @@ const  radialData= {"id": string,
         <br />
         {/* // Bump component */}
         <div style={{ marginLeft: 70, marginRight: 90 }}>
-          <Title order={1}>Bump</Title>
+          <u><Title order={1}>Bump</Title></u>
           <br />
           <Text >
             Bump component is used to show the distribution of data.
           </Text>
           <Text >
-            To use the Bump component, you need to import it from the ez-dashboard package.
+            To use the Bump component , you need to import it from the ez-dashboard package.
             <br />
             <br />
             <CodeBlock
@@ -2004,7 +2028,8 @@ const bumpdata = {"id": string,
             theme={dracula}
             wrapLines />
           <br />
-          <ScrollArea h={80} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
+          <u><Text>Example data</Text></u>
+          <ScrollArea h={100} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
           bumpdata=
           {
             JSON.stringify(
@@ -2059,7 +2084,7 @@ const bumpdata = {"id": string,
           <br />
           {/* // HeatMap */}
           <div style={{ marginLeft: 70, marginRight: 90 }}>
-            <Title order={1}>HeatMap</Title>
+            <u><Title order={1}>HeatMap</Title></u>
             <br />
             <Text >
               HeatMap component is used to show the distribution of data.
@@ -2090,6 +2115,7 @@ const HeatMapdata = {"id": string,
               theme={dracula}
               wrapLines />
             <br />
+            <u><Text>Example data</Text></u>
             <ScrollArea h={200} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
               HeatMapdata=
               {
@@ -2169,7 +2195,88 @@ const HeatMapdata = {"id": string,
           <br />
           <hr />
           <br />
-    {/* // next */}
+    {/* // PieChart */}
+    <div style={{ marginLeft: 70, marginRight: 90 }}>
+     <u><Title order={1}>PieChart</Title></u> 
+      <br />
+      <Text >
+        PieChart component is used to show the distribution of data.
+      </Text>
+      <Text >
+        To use the PieChart component, you need to import it from the ez-dashboard package.
+        <br />
+        <br />
+        <CodeBlock
+          text={`import  { PieChart }  from  'ez-dashboard';`}
+          language={'jsx'}
+          showLineNumbers={false}
+          theme={dracula}
+          wrapLines />
+      </Text>
+      <Title order={2}>Usage</Title>
+      <br />
+      <CodeBlock
+        text={`import  { PieChart }  from  'ez-dashboard';
+const PieData = [{
+          "id": string,
+          "label": string,
+          "value": number,
+        }]
+<PieChart data={PieData1} />`}
+        language={'jsx'}
+        showLineNumbers={false}
+        theme={dracula}
+        wrapLines />
+      <br />
+      <u><Text>Example data</Text></u>
+      <ScrollArea h={100} type="auto" scrollbarSize={8} scrollHideDelay={3000}>
+        PieData1=
+        {
+          JSON.stringify(
+            [{
+              "id": "coco-cola",
+              "label": "coco-cola",
+              "value": 448,
+            
+            },
+            {
+              "id": "pepsi",
+              "label": "pepsi",
+              "value": 502,
+            
+            },
+            {
+              "id": "fanta",
+              "label": "fanta",
+              "value": 505,
+            
+            },
+            {
+              "id": "sprite",
+              "label": "sprite",
+              "value": 77,
+            
+            },
+            {
+              "id": "7up",
+              "label": "7up",
+              "value": 551,
+            
+            }
+            ]
+          )
+        }
+      </ScrollArea>
+      <br />
+      <Image src="/image/piechart.png" alt="piechart image" style={{ height: '320px', width: '470px' }} />
+      <br />
+      <Title order={2}>Props</Title>
+      <br />
+      <Text >
+        The PieChart component has the following props: <br />
+        * data <br />
+      </Text> 
+      </div>
 
 
 
