@@ -12,7 +12,18 @@ const links = [
   { label: 'Button', link: '#tabs', order: 1 },
   { label: 'Avatar', link: '#badge', order: 1 },
   { label: 'Link', link: '#badge', order: 1 },
-  { label: 'TextInput', link: '#badge', order: 1 },]
+  { label: 'TextInput', link: '#badge', order: 1 },
+  { label: 'CheckBox', link: '#badge', order: 1 },
+  { label: 'Radio', link: '#badge', order: 1 },
+  { label: 'Stepper', link: '#badge', order: 1 },
+  { label:'ScatterPlot', link:'#badge', order: 1},
+  { label:'LineChart', link:'#badge', order: 1},
+  {label:'RadialBar', link:'#badge', order: 1},
+  {label:'Bump' , link:'#badge', order: 1},
+  {label:'HeatMap', link:'#badge', order: 1},
+  {label:'PieChart', link:'#badge', order: 1},
+
+  ]
 
 const Aside = () => {
     const items = links.map((item) => (
