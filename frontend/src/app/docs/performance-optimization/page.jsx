@@ -4,7 +4,7 @@ import React from 'react'
 const PerformanceOptimization = () => {
   return (
     <div>
-        <Title order={1} align={'center'} mt={50}>Coming Soon</Title>
+        <Title order={1} align={'center'} >Coming Soon</Title>
     </div>
   )
 }
