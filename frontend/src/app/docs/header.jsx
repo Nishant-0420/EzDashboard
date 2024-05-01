@@ -6,14 +6,10 @@ import classes from './header.module.css';
 
 const Header = () => {
     const tabs = [
-        'Home',
-        'Orders',
-        'Education',
-        'Community',
-        'Forums',
-        'Support',
-        'Account',
-        'Helpdesk',
+        'DOCS',
+        'User',
+        'Enterprise',
+        'Feedback',
     ];
 
     const theme = useMantineTheme();
@@ -31,6 +27,7 @@ const Header = () => {
         
             <Container size="md">
                 <Tabs
+                  
                     defaultValue="Home"
                     variant="outline"
                     visibleFrom="sm"
