@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
 
     return (
         <>
-            <Navbar />
+          
             {/* <AffixComponent /> */}
             {children}
         </>
