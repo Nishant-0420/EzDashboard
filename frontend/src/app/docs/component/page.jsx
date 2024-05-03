@@ -6,7 +6,7 @@ const Components = () => {
     
     return (
 
-        <div>
+        <div >
 
             {/* // Alert component */}
             <div style={{ marginLeft: 70, marginRight: 90 }} >

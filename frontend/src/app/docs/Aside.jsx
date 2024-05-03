@@ -41,7 +41,7 @@ const Aside = () => {
   ));
 
   return (
-    <div style={{width : 250}}>
+    <div style={{width : 200}}>
       <Group mb="md" >
         <IconListSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
         <Text>Components</Text>
