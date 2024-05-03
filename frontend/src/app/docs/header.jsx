@@ -17,6 +17,7 @@ const Header = () => {
           <Flex justify="space-between" align="center" gap={10}>
 
             <Button variant='filled' onClick={()=>router.push('/docs/navItems/Document')} >Docs</Button>
+            <Button variant='filled' onClick={()=>router.push('/docs/navItems/About')}>About</Button>
             <Button variant='filled' onClick={()=>router.push('/docs/navItems/Feedback')} >Feedback</Button>
           </Flex>
           <Flex justify="space-between" align="center" gap={10}>
