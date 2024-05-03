@@ -3,11 +3,11 @@ import { Container, Paper, Text, Code, Alert, Group, List, ListItem } from '@man
 
 const PerformanceOptimization = () => {
   return (
-    <Container size="sm">
+    <Container size="lg">
       <Paper shadow="xs" padding="lg">
-        <Text size="xl" weight={700} style={{ marginBottom: '20px' }}>
+        <u><Text size="xl" weight={700} style={{ marginBottom: '20px' }}>
           Performance Optimization Guide for <b> ez-dashboard</b>
-        </Text>
+        </Text></u>
 
         <Text>
           Welcome to the performance optimization guide for <Code>ez-dashboard</Code>! In this guide,
@@ -25,9 +25,9 @@ const PerformanceOptimization = () => {
 
         {/* Common Performance Issues */}
         <section style={{ marginTop: '30px' }}>
-          <Text size="xl" weight={700} style={{ marginBottom: '10px' }}>
+          <u><Text size="xl" weight={700} style={{ marginBottom: '10px' }}>
             Common Performance Issues
-          </Text>
+          </Text></u>
 
 
           {/* Rendering Optimization */}
