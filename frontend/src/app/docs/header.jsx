@@ -2,55 +2,34 @@ import { ActionIcon, Button, Container, Flex, Tabs, useMantineTheme } from '@man
 import { useDisclosure } from '@mantine/hooks';
 import React, { useState } from 'react';
 import classes from './header.module.css';
-import { IconBrandGithub } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';
+import { IconBrandGithub,IconBrandTwitter,IconBrandNpm } from '@tabler/icons-react';
 import Link from 'next/link';
 
 const Header = () => {
-  const tabs = [
-    {
-      value: 'DOCS',
-      label: 'Docs',
-      href: '/docs/navitems/Document',
-    },
-    {
-      value: 'FEEDBACK',
-      label: 'Feedback',
-      href: '/docs/navitems/feedback',
-    },
-  ];
-
+  const router = useRouter();
   const theme = useMantineTheme();
-  const [opened, { toggle }] = useDisclosure(false);
-  const [userMenuOpened, setUserMenuOpened] = useState(false);
-
-  const items = tabs.map((tab) => {
-    if (typeof tab === 'string') {
-      return <Tabs.Tab value={tab} key={tab}>{tab}</Tabs.Tab>;
-    } else {
-      return (
-        <Tabs.Tab value={tab.value} key={tab.value}>
-          <a href={tab.href} target="_blank" rel="noopener noreferrer">
-            {tab.label}
-          </a>
-        </Tabs.Tab>
-      );
-    }
-  });
 
   return (
     <div>
-      <Container size="md" style={{ paddingTop: 11, paddingBottom: 11 }}>
-        <Flex justify="" align="center">
-          <Flex justify="space-between" align="center" gap={5}>
+      <Container size="md" style={{ paddingTop: 11, paddingBottom: 11,paddingRight:50}} >
+        <Flex justify="right" align="center" gap={7}>
+          <Flex justify="space-between" align="center" gap={10}>
 
-            <Button variant='filled'>Docs</Button>
-            <Button variant='filled'>Examples</Button>
+            <Button variant='filled' onClick={()=>router.push('/docs/navItems/Document')} >Docs</Button>
+            <Button variant='filled' onClick={()=>router.push('/docs/navItems/Feedback')} >Feedback</Button>
           </Flex>
-          <Flex justify="space-between" align="center">
+          <Flex justify="space-between" align="center" gap={10}>
 
             <ActionIcon variant='filled' color='dark' component={Link} href="">
               <IconBrandGithub />
             </ActionIcon>
+            <ActionIcon variant='filled' color='dark' component={Link} href="">
+              <IconBrandTwitter />
+              </ActionIcon>
+            <ActionIcon variant='filled' color='dark' component={Link} href="">
+              <IconBrandNpm />
+              </ActionIcon>
           </Flex>
         </Flex>
       </Container>

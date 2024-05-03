@@ -6,7 +6,7 @@ import { CodeBlock, dracula } from 'react-code-blocks'
 const Alert = () => {
   return (
     <div style={{ marginLeft: 70, marginRight: 90 }} >
-      <Title order={1}>Alert</Title>
+      <u><Title order={1}>Alert</Title></u>
       <br />
       <Text  >
         Alert component is used to display important messages to users. It can be used to show
@@ -24,12 +24,18 @@ const Alert = () => {
       </Text>
       <Title order={2}>Usage</Title>
       <br />
-      <pre >
-        <code>
+      <CodeBlock
+      text=
           {`import { Alert } from 'ez-dashboard';
-<Alert title={'Alert'} description={'Alert message'}/>`}
-        </code>
-      </pre>
+const Dashbaord = () => {
+      return (
+            <Alert title={'Alert'} description={'Alert message'}/>
+              )}
+export default Dashboard;`}
+        language={'jsx'}
+        theme={dracula}
+        showLineNumbers={false}
+        wrapLines />
       <br />
       <Image src="/image/alert2.png" alt="alert box" style={{ height: '120px', width: '300px' }} />
       <br />
@@ -40,14 +46,6 @@ const Alert = () => {
         * title <br />
         * description
       </Text>
-      <br />
-      <pre >
-        <code>
-          {`<Alert title={'Alert'} description={'Alert message'}/>`}
-        </code>
-      </pre>
-      <br />
-      <Image src="/image/alert2.png" alt="alert box img with props" style={{ height: '120px', width: '300px' }} />
     </div>
   )
 }

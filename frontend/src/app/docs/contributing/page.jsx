@@ -1,11 +1,12 @@
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
+import { TextInput, Textarea, SimpleGrid, Group, Title, Button,Flex } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
 export function  Contributing() {
  
 
   return (
-    <form>
+    <div style={{width:'70%',margin:'auto',paddingTop:'6%'}}>
+      <form >
       <Title
         order={2}
         size="h1"
@@ -59,6 +60,9 @@ export function  Contributing() {
         </Button>
       </Group>
     </form>
+    
+    </div> 
+     
   );
 }
 
