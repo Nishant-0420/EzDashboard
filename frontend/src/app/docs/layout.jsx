@@ -5,9 +5,8 @@ import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Header from './header';
 import AffixComponent from '../AffixComponent';
-import Aside from './Aside';
 
-const MainLayout = ({ children }) => {
+const DocsLayout = ({ children }) => {
 
     const [opened, { toggle }] = useDisclosure();
 
@@ -17,8 +16,9 @@ const MainLayout = ({ children }) => {
 
             <AppShell
                 header={{ height: 60 }}
-                navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
-                aside={{ width: 300, breakpoint: 'md', collapsed: { desktop: false, mobile: true } }}
+                navbar={{ width: 250, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+                // aside={{ width: 300, breakpoint: 'md', collapsed: { desktop: false, mobile: true } }}
+                // sidebar={{ width: 300, breakpoint: 'md', collapsed: { desktop: false, mobile: true } }}
                 padding="md"
                 layout='alt'
             >
@@ -28,9 +28,12 @@ const MainLayout = ({ children }) => {
                 <AppShell.Navbar>
                     <Navbar />
                 </AppShell.Navbar>
-                <AppShell.Aside p="md">
+                {/* <AppShell.Aside p="md">
                     <Aside/>
-                </AppShell.Aside>
+                </AppShell.Aside> */}
+                {/* <AppShell.Sidebar p="md">
+                    <Sidebar />
+                </AppShell.Sidebar> */}
 
                 <AppShell.Main>{children}</AppShell.Main>
             </AppShell>
@@ -38,4 +41,4 @@ const MainLayout = ({ children }) => {
     )
 }
 
-export default MainLayout;
+export default DocsLayout;

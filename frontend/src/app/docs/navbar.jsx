@@ -29,12 +29,12 @@ const mockdata = [
       { label: 'Releases schedule', link: '/' },
     ],
   },
-  { label: 'Data Integration ', icon: IconPresentationAnalytics, link: '/docs/data-integration' },
   { label: 'Example ', icon: IconFileAnalytics, link: '/docs/example',
     links: [
       { label: 'Alert', link: '/docs/example/alert' },
       { label: 'Progress Bar', link: '/docs/example/progressbar' },
     ]},
+    { label:'Components', icon: IconFileAnalytics, link: '/docs/component'},
   { label: 'FAQs Trrobleshooting', icon: IconAdjustments, link: '/docs/Faqs-troubleshooting' },
   {
     label: 'Getting Started ',
@@ -44,7 +44,6 @@ const mockdata = [
   },
   { label: 'License Legal ', icon: IconAdjustments, link: '/docs/License-Legal' },
   { label: 'Performance Optimization ', icon: IconAdjustments, link: '/docs/performance-optimization' },
-  { label: 'Theme styling ', icon: IconAdjustments, link: '/docs/theme-styling' },
 ];
 
 export function Navbar() {
