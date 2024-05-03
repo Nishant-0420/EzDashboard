@@ -28,8 +28,9 @@ const FaqsTroubleshooting = () => {
              npx tailwindcss init -p<br />
             </li>
             <li>
-             <b>Step 3: Configure your path in tailwind.config.js</b>  <br />
-             <Image src="/image/tawlind.png" alt="" style={{ height: '120px', width: '300px' }} />
+             <b>Step 3: Configure your path in tailwind.config.js</b>  
+             <br />
+             <Image src="/image/tawlind.png" alt="code" style={{ height: '250px', width: '390px' }} />
               <br />
               ADD this line :"./node_modules/ez-dashboard/dist/esm/*/.js"  
             </li>

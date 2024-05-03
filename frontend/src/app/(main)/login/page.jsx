@@ -19,6 +19,8 @@ import TwitterButton from './twitterButton';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { SegmentedControl } from '@mantine/core';
+import { enqueueSnackbar } from 'notistack';
+import { useRouter } from 'next/navigation';
 
 const formValidationSchema = yup.object().shape({
   email: yup.string().email('Invalid email').required('Required'),
@@ -27,6 +29,7 @@ const formValidationSchema = yup.object().shape({
 
 })
 export function Login(props) {
+  const router = useRouter();
   const [type, toggle] = useToggle(['login', 'register']);
   const loginForm = useFormik({
     initialValues: {
@@ -45,10 +48,15 @@ export function Login(props) {
           .then((response) => {
             console.log(response.status);
             if (response.status === 200) {
+              enqueueSnackbar("User login", {variant:"success"})
+              router.push("/")
+
               response.json()
                 .then(data => {
                   console.log(data);
                 })
+            }else{
+              enqueueSnackbar("user not logged in", {variant:"error"})
             }
           }).catch((err) => {
             console.log(err); })
