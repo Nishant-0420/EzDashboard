@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Text, Container, ActionIcon, Group,Image, rem,groups } from '@mantine/core';
+import { Text, Container, ActionIcon, Group,Image, rem,groups, Box } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 
 import classes from './Footer.module.css'
@@ -58,6 +58,8 @@ const Footer = () => {
         
   return (
     <footer className={classes.footer}>
+
+     <Box py={30} style={{backgroundColor:'#1f2937'}}>
        <Container className={classes.inner}>
         <div className={classes.logo}>
           <Image src='/image/logo.png' alt='library logo' style={{height: 85,width: 250}}/> 
@@ -67,6 +69,9 @@ const Footer = () => {
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
+      </Box>
+    
+      <div style={{backgroundColor:'#1f2937'}}>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
           © 2020 mantine.dev. All rights reserved.
@@ -84,6 +89,8 @@ const Footer = () => {
           </ActionIcon>
         </Group>
       </Container>
+      </div>
+    
     </footer>
   )
 }

@@ -35,10 +35,10 @@ import {
     },
   ];
 
-const FeaturesCards = () => {
+const   FeaturesCards = () => {
     const theme = useMantineTheme();
     const features = mockdata.map((feature) => (
-      <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
+      <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl" >
         <feature.icon
           style={{ width: rem(50), height: rem(50) }}
           stroke={2}
@@ -54,6 +54,7 @@ const FeaturesCards = () => {
     ));
   
   return (
+    <div style={{backgroundColor:'#1f2937'}}> 
     <Container size="lg" py="xl">
     <Group justify="center">
       <Badge variant="filled" size="lg">
@@ -73,7 +74,7 @@ const FeaturesCards = () => {
     <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
       {features}
     </SimpleGrid>
-  </Container>
+  </Container></div>
   )
 }
 
