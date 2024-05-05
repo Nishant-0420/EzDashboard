@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <div>
-      <Container size="md" style={{ paddingTop: 11, paddingBottom: 11,paddingRight:50}} >
+      <Container size="md" style={{ paddingTop: 11, paddingBottom: 14,paddingRight:50}} >
         <Flex justify="right" align="center" gap={7}>
           <Flex justify="space-between" align="center" gap={10}>
 

@@ -11,27 +11,27 @@ import {
     rem,
     useMantineTheme,
   } from '@mantine/core';
-  import { IconGauge, IconUser, IconCookie } from '@tabler/icons-react';
+  import {IconChartBar ,IconLayout,IconSettings} from '@tabler/icons-react';
   import classes from './FeaturesCards.module.css';
   
   const mockdata = [
     {
-      title: 'Extreme performance',
-      description:
-        'This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit',
-      icon: IconGauge,
+      title: 'Effortless Dashboard Creation',
+    description:
+      'Build professional-looking dashboards in record time with EzDashboard\'s pre-built components and flexible design system.',
+    icon: IconChartBar,
     },
     {
-      title: 'Privacy focused',
-      description:
-        'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
-      icon: IconUser,
+      title: 'Seamless Data Visualization',
+    description:
+      'EzDashboard offers a rich set of chart types to perfectly visualize your data and gain valuable insights.',
+    icon: IconLayout,
     },
     {
-      title: 'No third parties',
-      description:
-        'They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves',
-      icon: IconCookie,
+      title: 'Highly Customizable',
+    description:
+      'Tailor your dashboards to match your brand identity and specific needs with EzDashboard\'s extensive customization options.',
+    icon: IconSettings,
     },
   ];
 
@@ -54,21 +54,20 @@ const   FeaturesCards = () => {
     ));
   
   return (
-    <div style={{backgroundColor:'#1f2937'}}> 
+    <div style={{backgroundColor:'#00000'}}> 
     <Container size="lg" py="xl">
     <Group justify="center">
       <Badge variant="filled" size="lg">
-        Best company ever
+      EzDashboard - Revolutionize Your Dashboards
       </Badge>
     </Group>
 
     <Title order={2} className={classes.title} ta="center" mt="sm">
-      Integrate effortlessly with any technology stack
+    Effortlessly build and manage data insights
     </Title>
 
     <Text c="dimmed" className={classes.description} ta="center" mt="md">
-      Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when
-      hunger drives it to try biting a Steel-type Pokémon.
+    Make informed decisions faster with EzDashboard's intuitive features.
     </Text>
 
     <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>

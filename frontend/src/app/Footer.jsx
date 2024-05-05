@@ -59,7 +59,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
 
-     <Box py={30} style={{backgroundColor:'#1f2937'}}>
+     <Box py={30} style={{backgroundColor:'#00000'}}>
        <Container className={classes.inner}>
         <div className={classes.logo}>
           <Image src='/image/logo.png' alt='library logo' style={{height: 85,width: 250}}/> 
@@ -71,7 +71,7 @@ const Footer = () => {
       </Container>
       </Box>
     
-      <div style={{backgroundColor:'#1f2937'}}>
+      <div style={{backgroundColor:'#00000'}}>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
           © 2020 mantine.dev. All rights reserved.

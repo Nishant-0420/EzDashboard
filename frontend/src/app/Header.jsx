@@ -1,61 +1,41 @@
-'use client'
-import React from 'react'
-import { Autocomplete, Group, Burger, rem, opened, toggle, items ,Image} from '@mantine/core';
+import { ActionIcon, Button, Container, Flex, Tabs, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconSearch } from '@tabler/icons-react';
-
-import classes from './Header.module.css'
+import React, { useState } from 'react';
+import classes from './header.module.css';
 import { useRouter } from 'next/navigation';
-
-const links = [
-    { link: '/about', label: 'Feature' },
-    { link: '/pricing', label: 'Pricing' },
-    { link: '/learn', label: 'Learn' },
-    { link: '/community', label: 'Community' },
-  ];
+import { IconBrandGithub,IconBrandTwitter,IconBrandNpm } from '@tabler/icons-react';
+import Link from 'next/link';
 
 const Header = () => {
+  const router = useRouter();
+  const theme = useMantineTheme();
 
-    const router = useRouter();
-    const [opened, { toggle }] = useDisclosure(false);
-    const items = links.map((link) => (
-        <a
-          key={link.label}
-          href={link.link}
-          className={classes.link}
-          onClick={(event) => event.preventDefault()}
-        >
-          {link.label}
-        </a>
-      ));
-    
-    return (
-        <header className={classes.header}>
-            <div className={classes.inner}>
-                <Group>
-                    <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-                    <div style={{ }}>
-                        <Image onClick={() => router.push('/')} src='/image/logo.png' alt='library logo' style={{height: 85,width: 250}}/>
-                        
-                    </div>
-                    
-                </Group>
-                <Group>
-                    <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
-                        {items}
-                        </Group>
-                
-                    <Autocomplete
-                        className={classes.search}
-                        placeholder="Search"
-                        leftSection={<IconSearch style={{ marginRight: rem(300),width: rem(16), height: rem(16) }} stroke={1.5} />}
-                        data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
-                        visibleFrom="xs"
-                    />
-                </Group>
-            </div>
-        </header>
-    )
-}
+  return (
+    <div>
+      <Container size="md" style={{ paddingTop: 11, paddingBottom: 11,}} >
+        <Flex justify="right" align="center" gap={7}>
+          <Flex justify="space-between" align="center" gap={10}>
+
+            <Button variant='filled' onClick={()=>router.push('/docs/navItems/Document')} >Docs</Button>
+            <Button variant='filled' onClick={()=>router.push('/docs/navItems/About')}>About</Button>
+            <Button variant='filled' onClick={()=>router.push('/docs/navItems/Feedback')} >Feedback</Button>
+          </Flex>
+          <Flex justify="space-between" align="center" gap={10}>
+
+            <ActionIcon variant='filled' color='dark' component={Link} href="">
+              <IconBrandGithub />
+            </ActionIcon>
+            <ActionIcon variant='filled' color='dark' component={Link} href="">
+              <IconBrandTwitter />
+              </ActionIcon>
+            <ActionIcon variant='filled' color='dark' component={Link} href="">
+              <IconBrandNpm />
+              </ActionIcon>
+          </Flex>
+        </Flex>
+      </Container>
+    </div>
+  );
+};
 
 export default Header;
