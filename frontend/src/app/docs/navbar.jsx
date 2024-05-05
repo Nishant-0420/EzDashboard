@@ -15,9 +15,9 @@ import classes from './navbarNested.module.css';
 const mockdata = [
   { label: 'API reference ', icon: IconGauge, link: '/docs/api-reference' },
   {
-    label: 'Contributing',
+    label: 'Contribution',
     icon: IconNotes,
-    link: '/docs/contributing'
+    link: '/docs/contribution'
   },
   {
     label: 'Release-Note',
@@ -29,10 +29,11 @@ const mockdata = [
       { label: 'Releases schedule', link: '/' },
     ],
   },
-  { label: 'Example ', icon: IconFileAnalytics, link: '/docs/example',
+  { label: 'Example ', icon: IconFileAnalytics, link: '#',
     links: [
       { label: 'Alert', link: '/docs/example/alert' },
       { label: 'Progress Bar', link: '/docs/example/progressbar' },
+      { label: 'StatCard', link: '/docs/example/statcard' },
     ]},
     { label:'Components', icon: IconFileAnalytics, link: '/docs/component'},
   { label: 'FAQs Trrobleshooting', icon: IconAdjustments, link: '/docs/Faqs-troubleshooting' },
@@ -61,10 +62,11 @@ export function Navbar() {
         <div className={classes.linksInner}>{links}</div>
       </ScrollArea>
 
-      <div className={classes.footer}>
+      {/* <div className={classes.footer}>
         <UserButton />
-      </div>
+      </div> */}
     </nav>
+    
   );
 }
 

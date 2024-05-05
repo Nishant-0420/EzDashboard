@@ -1,20 +1,17 @@
 'use client'
 import React from 'react'
-import { TextInput, Textarea, Button,Title,SimpleGrid,Group} from '@mantine/core'
+import { TextInput, Textarea, SimpleGrid, Group, Title, Button,Flex } from '@mantine/core';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-
-const feedbackValidationSchema = Yup.object().shape({
+const contributionValidationSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email address').required('Required'),
   name: Yup.string().required('Required'),
   subject: Yup.string().required('Required'),
   message: Yup.string(),
 });
 
-
-const Feedback = () => {
-
-  const feedbackForm = useFormik({
+export function  Contribution() {
+ const contributionForm = useFormik({
     initialValues: {
       name: '',
       email: '',
@@ -23,7 +20,7 @@ const Feedback = () => {
     },
     onSubmit: (values) => {
       console.log(JSON.stringify(values, null, 2));
-      fetch( "http://localhost:5000/feedback/add",{
+      fetch( "http://localhost:5000/contribution/add",{
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
@@ -38,14 +35,13 @@ const Feedback = () => {
           console.log(err);
         })    
     },
-
-    validationSchema: feedbackValidationSchema,
-
+    validationSchema: contributionValidationSchema,
   }
   )
+
   return (
     <div style={{width:'70%',margin:'auto',paddingTop:'6%'}}>
-      <form onSubmit={feedbackForm.handleSubmit} >
+      <form onSubmit={contributionForm.handleSubmit} >
       <Title
         order={2}
         size="h1"
@@ -53,7 +49,7 @@ const Feedback = () => {
         fw={900}
         ta="center"
       >
-      FeedBack Form
+      Join the Community
       </Title>
 
       <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
@@ -62,7 +58,8 @@ const Feedback = () => {
           placeholder="Your name"
           name="name"
           variant="filled"
-          onChange={feedbackForm.handleChange} value={feedbackForm.values.name}
+          onChange={contributionForm.handleChange} 
+          value={contributionForm.values.name}
           />
      
         <TextInput
@@ -70,7 +67,8 @@ const Feedback = () => {
           placeholder="Your email"
           name="email"
           variant="filled"
-          onChange={feedbackForm.handleChange} value={feedbackForm.values.email}
+          onChange={contributionForm.handleChange}
+          value={contributionForm.values.email}
           
         />
       </SimpleGrid>
@@ -81,7 +79,8 @@ const Feedback = () => {
         mt="md"
         name="subject"
         variant="filled"
-        onChange={feedbackForm.handleChange} value={feedbackForm.values.subject}
+        onChange={contributionForm.handleChange}
+        value={contributionForm.values.subject}
         
       />
       <Textarea
@@ -93,7 +92,8 @@ const Feedback = () => {
         autosize
         name="message"
         variant="filled"
-        onChange={feedbackForm.handleChange} value={feedbackForm.values.message}
+        onChange={contributionForm.handleChange}
+        value={contributionForm.values.message}
        
       />
 
@@ -103,8 +103,10 @@ const Feedback = () => {
         </Button>
       </Group>
     </form>
+    
     </div> 
-  )
+     
+  );
 }
 
-export default Feedback
+export default Contribution;

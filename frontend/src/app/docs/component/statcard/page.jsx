@@ -39,10 +39,10 @@ const StatCardComponent = () => {
                 <br />
                 <Text >
                     The StatCard component has the following props: <br />
-                    * Value <br />
-                    * Description <br />
-                    * Label <br />
-                    * Color
+                    * value <br />
+                    * description <br />
+                    * label <br />
+                    * color
                 </Text>
             </div>
   )
