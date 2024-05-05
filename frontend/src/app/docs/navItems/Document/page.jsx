@@ -5,14 +5,14 @@ import { CodeBlock, dracula } from 'react-code-blocks'
 
 const Document = () => {
   return (
-    <div>
-       <Title order={1}>Overview </Title>
+    <div style={{marginLeft:50}}>
+       <u><Title order={1}>Overview </Title></u>
       <br />
-      <Text>
+      <Text style={{marginLeft:'40px'}}>
        EzDashboard is a powerful React library designed to streamline the creation of professional-looking dashboards. With EzDashboard, you can effortlessly construct visually appealing and data-driven interfaces that empower informed decision-making. By leveraging pre-built components and a flexible design system, EzDashboard empowers developers of all skill levels to rapidly prototype and build exceptional dashboards.
       </Text>
         <br />
-        <Title order={1}>Motivation</Title>
+        <Title order={2}>Motivation</Title>
         <br />
         <ul>
             <li>
@@ -41,7 +41,7 @@ const Document = () => {
 
         </ul>
         <br />
-        <Title order={1}>Installation</Title>
+        <Title order={2}>Installation</Title>
         <br/>
         <Text>
             To install EzDashboard, run the following command in your terminal:
@@ -54,7 +54,7 @@ const Document = () => {
           wrapLines />
 
         <br />
-    <Title order={1}>Available Components</Title>
+    <Title order={2}>Available Components</Title>
     <br /> 
     <ul>
         <li>
