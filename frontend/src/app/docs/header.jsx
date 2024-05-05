@@ -13,11 +13,7 @@ const Header = () => {
   console.log(pathname);
   return (
     <div>
-<<<<<<< HEAD
       <Container size="md" style={{ paddingTop: 11, paddingBottom: 14,paddingRight:50}} >
-=======
-      <Container size="md" style={{ paddingTop: 11, paddingBottom: 11, paddingRight: pathname.includes('component') ? 100 : 20 }} >
->>>>>>> 9375e0a97a34e007af27bc6052e674369844c01c
         <Flex justify="right" align="center" gap={7}>
           <Flex justify="space-between" align="center" gap={10}>
 

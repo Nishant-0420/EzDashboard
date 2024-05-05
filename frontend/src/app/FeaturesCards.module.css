@@ -25,6 +25,15 @@
   
   .card {
     border: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+    position: relative;
+  transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(rem(35px));
+    box-shadow: 20px -20px 20px rgba(12, 12, 169, 0.2);
+    z-index: 1;
+    
   }
   
   .cardTitle {
