@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container, Paper, Text, Code, Alert, Group, List, ListItem } from '@mantine/core';
+import { Container, Paper,Title, Text, Code, Alert, Group, List, ListItem } from '@mantine/core';
 
 const PerformanceOptimization = () => {
   return (
     <Container size="lg">
       <Paper shadow="xs" padding="lg">
-        <u><Text size="xl" weight={700} style={{ marginBottom: '20px' }}>
+        <u><Title order={1} style={{ marginBottom: '20px' }}>
           Performance Optimization Guide for <b> ez-dashboard</b>
-        </Text></u>
+        </Title></u>
 
         <Text>
           Welcome to the performance optimization guide for <Code>ez-dashboard</Code>! In this guide,
@@ -25,14 +25,12 @@ const PerformanceOptimization = () => {
 
         {/* Common Performance Issues */}
         <section style={{ marginTop: '30px' }}>
-          <u><Text size="xl" weight={700} style={{ marginBottom: '10px' }}>
+          <Title  order={2} style={{ marginBottom: '10px' }}>
             Common Performance Issues
-          </Text></u>
-
-
+          </Title>
           {/* Rendering Optimization */}
           <Text size="md" weight={700} style={{ marginBottom: '5px' }}>
-            Rendering Optimization
+            <b>*Rendering Optimization</b>
           </Text>
           <Text>
             - Utilize techniques like `React.memo` to prevent unnecessary re-renders of components.
@@ -43,7 +41,7 @@ const PerformanceOptimization = () => {
 
           {/* State Management */}
           <Text size="md" weight={700} style={{ marginBottom: '5px', marginTop: '15px' }}>
-            State Management
+            <b>*State Management</b>
           </Text>
           <Text>
             - Use `useState` and `useEffect` strategically to minimize re-renders.
@@ -54,7 +52,7 @@ const PerformanceOptimization = () => {
 
           {/* Data Fetching */}
           <Text size="md" weight={700} style={{ marginBottom: '5px', marginTop: '15px' }}>
-            Data Fetching
+            <b>*Data Fetching</b>
           </Text>
           <Text>
             - Implement lazy loading for components and data to improve initial load times.
@@ -66,58 +64,56 @@ const PerformanceOptimization = () => {
 
         {/* Best Practices for ez-dashboard */}
         <section style={{ marginTop: '30px' }}>
-          <Text size="xl" weight={700} style={{ marginBottom: '10px' }}>
+          <Title order={2} style={{ marginBottom: '10px' }}>
             Best Practices for <b>ez-dashboard</b>
-          </Text>
-
+          </Title>
           {/* Component Optimization */}
           <Text size="md" weight={700} style={{ marginBottom: '5px' }}>
-            Component Optimization
+            <b>*Component Optimization</b>
           </Text>
           <Text>
-            * Utilize memoization techniques like `React.memo` for caching expensive computations within
+            - Utilize memoization techniques like `React.memo` for caching expensive computations within
               ez-dashboard components.
           </Text>
           <Text>
-            * Prefer functional components over class components for better performance in ez-dashboard.
+            - Prefer functional components over class components for better performance in ez-dashboard.
           </Text>
 
           {/* Bundle Optimization */}
           <Text size="md" weight={700} style={{ marginBottom: '5px', marginTop: '15px' }}>
-            Bundle Optimization
+            <b>*Bundle Optimization</b>
           </Text>
           <Text>
-            * Enable code splitting to reduce the initial bundle size of your ez-dashboard application.
+            - Enable code splitting to reduce the initial bundle size of your ez-dashboard application.
           </Text>
           <Text>
-            * Ensure support for tree shaking to minimize the final bundle size of your ez-dashboard app.
+            - Ensure support for tree shaking to minimize the final bundle size of your ez-dashboard app.
           </Text>
         </section>
 
         {/* Tools and Techniques */}
         <section style={{ marginTop: '30px' }}>
-          <Text size="xl" weight={700} style={{ marginBottom: '10px' }}>
+          <Title order={2}  style={{ marginBottom: '10px' }}>
             Tools and Techniques
-          </Text>
-
+          </Title>
           {/* Performance Monitoring */}
           <Text size="md" weight={700} style={{ marginBottom: '5px' }}>
-            Performance Monitoring
+            <b>*Performance Monitoring</b>
           </Text>
           <Text>
-            * Use React DevTools to profile component renders and state changes within your
+            - Use React DevTools to profile component renders and state changes within your
               ez-dashboard application.
           </Text>
           <Text>
-            * Run Lighthouse audits to identify performance bottlenecks in your ez-dashboard applications.
+            - Run Lighthouse audits to identify performance bottlenecks in your ez-dashboard applications.
           </Text>
         </section>
 
         {/* Additional Resources */}
         <section style={{ marginTop: '30px' }}>
-          <Text size="xl" weight={700} style={{ marginBottom: '10px' }}>
+          <Title order={2}  style={{ marginBottom: '10px' }}>
             Additional Resources
-          </Text>
+          </Title>
 
           {/* External Links */}
           <List>
