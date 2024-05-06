@@ -80,21 +80,21 @@ const Home = () => {
                 </List.Item>
               </List>
 
-              <Group mt={30}>
-                <Button radius="xl" size="md" className={classes.control} onClick={() => router.push('/docs/gettingStarted')}>
-
-                  Get started
-                </Button>
-                <Button variant="default" radius="xl" size="md" className={classes.control} leftSection={<GithubIcon size={20} />}>
-
-                  GitHub
-                </Button>
-              </Group>
-            </div>
-            <Image src={'./herobullet.svg'} alt="Hero bullet" className={classes.image} />
-
-          </div>
-        </Container>
+          <Group mt={30}>
+            <Button radius="xl" size="md" className={classes.control}  onClick={() => router.push('/docs/gettingStarted')}>
+           
+              Get started
+            </Button>
+            <Button variant="default" radius="xl" size="md" className={classes.control}  leftSection={<GithubIcon size={20} />}>
+          
+            GitHub
+            </Button>
+          </Group>
+        </div>
+        <Image src={'./herobullet.svg'} alt="Hero bullet" className={classes.image} />
+       
+      </div>
+    </Container>
       </section>
 
       <FeaturesCards style={{ backgroundColor: '#00000', }} />
