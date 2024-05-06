@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Title, Text } from '@mantine/core'
 import { CodeBlock, dracula } from 'react-code-blocks'
 
 const gettingStarted = () => {
@@ -89,9 +88,6 @@ const gettingStarted = () => {
         </li>
     </ul>
     <br/>
-    <Title order={1}> Customization</Title>
-    
-
     </div>
   )
 }
