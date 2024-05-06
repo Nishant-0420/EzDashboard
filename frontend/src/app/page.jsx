@@ -11,6 +11,7 @@ import classes from './HeroBullet.module.css';
 import { IconCheck } from '@tabler/icons-react';
 import { GithubIcon } from '@mantinex/dev-icons';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Home = () => {
   const router = useRouter();
@@ -85,7 +86,7 @@ const Home = () => {
            
               Get started
             </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.control}  leftSection={<GithubIcon size={20} />}>
+            <Button variant="default" radius="xl" size="md" className={classes.control}  leftSection={<GithubIcon size={20}/>} component={Link} href="https://www.npmjs.com/package/ez-dashboard">
           
             GitHub
             </Button>
