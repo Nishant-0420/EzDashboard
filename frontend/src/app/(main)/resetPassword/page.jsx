@@ -17,7 +17,7 @@ const ResetPassword = () => {
     const router = useRouter();
 
     const checkMailExists = async () => {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/user/getbymail/${emailRef.current.value}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/getbyemail/${emailRef.current.value}`);
         // console.log(res.status);
         const data = await res.json();
         // console.log(data);
@@ -30,7 +30,7 @@ const ResetPassword = () => {
             enqueueSnackbar('Email not registered', { variant: 'error' });
             return;
         }
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/util/sendotp`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/util/sendotp`, {
             method: 'POST',
             body: JSON.stringify({ email: emailRef.current.value }),
             headers: {
@@ -46,7 +46,7 @@ const ResetPassword = () => {
     }
 
     const verifyOTP = async () => {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/util/verifyotp/${emailRef.current.value}/${otpRef.current.value}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/util/verifyotp/${emailRef.current.value}/${otpRef.current.value}`);
         // console.log(res.status);
         if (res.status === 200) {
             setShowForm(true);
@@ -56,7 +56,7 @@ const ResetPassword = () => {
     }
 
     const updatePassword = async (values) => {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/user/update/${verifiedUser._id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/update/${verifiedUser._id}`, {
             method: 'PUT',
             body: JSON.stringify(values),
             headers: {
@@ -64,10 +64,10 @@ const ResetPassword = () => {
             }
         });
         // console.log(res.status);
-        if(res.status === 200) {
+        if (res.status === 200) {
             enqueueSnackbar('Password updated successfully', { variant: 'success' });
             router.push('/login');
-        }else{
+        } else {
             enqueueSnackbar('Something went wrong', { variant: 'error' });
         }
     }
@@ -87,7 +87,7 @@ const ResetPassword = () => {
     return (
         <>
             <Paper>
-                {/* <Container w={'100%'} size={460}>
+                <Container w={'100%'} size={460}>
                     <Title order={1} mb={30} style={{ textAlign: 'center' }}>
                         Reset Your Password
                     </Title>
@@ -132,7 +132,7 @@ const ResetPassword = () => {
                         )
                     }
 
-                </Container> */}
+                </Container>
             </Paper>
         </>
     )

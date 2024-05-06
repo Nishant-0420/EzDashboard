@@ -18,6 +18,7 @@ const ProgressBar = () => {
             text={`import  { ProgressBar }  from  'ez-dashboard';`}
             language={'jsx'}
             theme={dracula}
+            showLineNumbers={false}
             wrapLines />
         </Text>
         <Title order={2}>Usage</Title>

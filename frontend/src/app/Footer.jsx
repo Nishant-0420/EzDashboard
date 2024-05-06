@@ -6,31 +6,21 @@ import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/
 import classes from './Footer.module.css'
 
 const data = [
-    {
-      title: 'About',
-      links: [
-        { label: 'Features', link: '#' },
-        { label: 'Pricing', link: '#' },
-        { label: 'Support', link: '#' },
-        { label: 'Forums', link: '#' },
-      ],
-    },
+  
     {
       title: 'Project',
       links: [
-        { label: 'Contribute', link: '#' },
-        { label: 'Media assets', link: '#' },
-        { label: 'Changelog', link: '#' },
-        { label: 'Releases', link: '#' },
+        { label: 'Contribution', link: '/docs/contribution' },
+        { label: 'Feedback', link: '/docs/navItems/Feedback' },
+        { label: 'Releases', link: '/docs/Release-note/releasenote' },
       ],
     },
     {
       title: 'Community',
       links: [
-        { label: 'Join Discord', link: '#' },
-        { label: 'Follow on Twitter', link: '#' },
-        { label: 'Email newsletter', link: '#' },
-        { label: 'GitHub discussions', link: '#' },
+        { label: 'Follow on Instagram', link: '#' },
+        { label: 'NPM', link: 'https://www.npmjs.com/package/ez-dashboard' },   
+        { label: 'GitHub discussions', link: ' https://github.com/Nishant-0420/EzDashboard' },
       ],
     },
   ];
@@ -42,7 +32,7 @@ const Footer = () => {
         className={classes.link}
         component="a"
         href={link.link}
-        onClick={(event) => event.preventDefault()}
+     
       >
         {link.label}
       </Text>
@@ -64,7 +54,7 @@ const Footer = () => {
         <div className={classes.logo}>
           <Image src='/image/logo.png' alt='library logo' style={{height: 85,width: 250}}/> 
             <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+            Build fully functional accessible Dashboard faster than ever
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
@@ -74,20 +64,9 @@ const Footer = () => {
       <div style={{backgroundColor:'#00000'}}>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2024 EzDashboard  All rights reserved.
         </Text>
 
-        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-        </Group>
       </Container>
       </div>
     

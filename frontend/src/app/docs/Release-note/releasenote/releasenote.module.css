@@ -1,0 +1,39 @@
+/* PreviousReleasesPage.css */
+
+.previous-releases-container {
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    margin-bottom: 20px;
+  }
+  
+  .release-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .release-item {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .release-version {
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  .release-notes {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .divider {
+    margin-top: 20px;
+  }
+  

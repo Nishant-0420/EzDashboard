@@ -24,8 +24,7 @@ import { useRouter } from 'next/navigation';
 
 const formValidationSchema = yup.object().shape({
   email: yup.string().email('Invalid email').required('Required'),
-  name: yup.string().required('Required'),
-  password: yup.string().min(6, 'Password should include at least 6 characters').required('Required'),
+  password: yup.string().required('Required'),
 
 })
 export function Login(props) {

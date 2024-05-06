@@ -1,10 +1,12 @@
 'use client'
 import React from 'react'
 import { CodeBlock, dracula } from 'react-code-blocks'
+import { Title, Text,Image } from '@mantine/core'
+
 
 const gettingStarted = () => {
   return (
-    <div>
+    <div style={{marginLeft:40,marginRight:30}}>
        <Title order={1}>What is EzDashboard?</Title>
       <br />
       <Text>
@@ -45,14 +47,62 @@ const gettingStarted = () => {
         <Text>
             To install EzDashboard, run the following command in your terminal:
         </Text>
-        <CodeBlock
-          text={`npm i ez-dashboard` }  
-          language={'jsx'}
-          theme={dracula}
-          showLineNumbers={false}
-          wrapLines />
+        
+           <CodeBlock
+            text={`npm i ez-dashboard`}
+            language={'jsx'}
+            theme={dracula}
+            showLineNumbers={false}
+            wrapLines />
 
         <br />
+        <Title order={3} >2.Enviroment required to use Ezdashboard</Title>
+      <Text>
+      <ul>
+        <li>
+          You have to install Talwind CSS with VITE to use EzDashboard:
+          <ul>
+            <li>
+             <b>Step 1: Create your project</b>  <br />
+              npm create vite@latest my-project -- --template react<br />
+              cd my-project<br />
+            </li>
+            <li>
+             <b>Step 2:Install Talwind CSS</b>  <br />
+             npm install -D tailwindcss postcss autoprefixer<br />
+             npx tailwindcss init -p<br />
+            </li>
+            <li>
+             <b>Step 3: Configure your path in tailwind.config.js</b>  
+             <br />
+             <Image src="/image/tawlind.png" alt="code" style={{ height: '300px', width: '500px' }} />
+              <br />
+              ADD this line :"./node_modules/ez-dashboard/dist/esm/*/.js"  
+            </li>
+            <li>
+             <b>Step 4: ADD tailwind directives to your css (index.css)</b>  <br />
+             @tailwind base;<br/>
+             @tailwind components;<br/>
+             @tailwind utilities;<br/>
+
+            </li>
+            <li>
+             <b>Step 4:Start your Build process</b>  <br />
+              npm run dev<br/>  
+
+            </li>
+            <li>
+             <b>Step 4:Install EzDashboard </b>  <br />
+              npm i ez-dashboard <br/>  
+
+            </li>
+
+          </ul>   
+          
+        </li>
+      </ul>
+    </Text>
+    <br />
     <Title order={1}>Available Components</Title>
     <br /> 
     <ul>
