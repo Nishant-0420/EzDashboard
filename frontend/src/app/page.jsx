@@ -54,7 +54,7 @@ const Home = () => {
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}  onClick={() => router.push('/docs/api-reference')}>
+            <Button radius="xl" size="md" className={classes.control}  onClick={() => router.push('/docs/gettingStarted')}>
            
               Get started
             </Button>
