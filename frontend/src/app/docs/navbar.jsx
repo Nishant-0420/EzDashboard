@@ -24,9 +24,9 @@ const mockdata = [
     icon: IconCalendarStats,
     link: '/docs/Release-note',
     links: [
-      { label: 'Upcoming releases', link: '/'},
-      { label: 'Previous releases', link: '/' },
-      { label: 'Releases schedule', link: '/' },
+      { label: 'Upcoming releases', link: '/docs/Release-note/upcomingreleases' },
+      { label: 'Previous releases', link: '/docs/Release-note/releasenote' },
+      
     ],
   },
   { label: 'Example ', icon: IconFileAnalytics, link: '#',
