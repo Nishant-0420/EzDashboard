@@ -18,7 +18,7 @@ const data = [
     {
       title: 'Community',
       links: [
-        { label: 'Follow on Instagram', link: '#' },
+        { label: 'Follow on Instagram', link: 'https://www.instagram.com/ez_dashboard_?igsh=cGFtYXIwcGl5ZHNh' },
         { label: 'NPM', link: 'https://www.npmjs.com/package/ez-dashboard' },   
         { label: 'GitHub discussions', link: ' https://github.com/Nishant-0420/EzDashboard' },
       ],

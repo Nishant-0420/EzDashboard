@@ -25,7 +25,7 @@ const Header = () => {
             <ActionIcon variant='filled' color='dark' component={Link} href=" https://github.com/Nishant-0420/EzDashboard">
               <IconBrandGithub />
             </ActionIcon>
-            <ActionIcon variant='filled' color='dark' component={Link} href="">
+            <ActionIcon variant='filled' color='dark' component={Link} href="https://www.instagram.com/ez_dashboard_?igsh=cGFtYXIwcGl5ZHNh">
               <IconBrandInstagram />
               </ActionIcon>
             <ActionIcon variant='filled' color='dark' component={Link} href="https://www.npmjs.com/package/ez-dashboard">

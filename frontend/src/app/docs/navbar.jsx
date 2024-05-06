@@ -11,6 +11,7 @@ import {
   IconApi,
   IconLicense,
   IconSettingsAutomation,
+  IconHomeStar,
 
 
 
@@ -22,7 +23,8 @@ import classes from './navbarNested.module.css';
 const mockdata = [
   {
     label: 'Getting Started ',
-    icon: IconLock,
+    icon: IconHomeStar
+    ,
     link: '/docs/gettingStarted'
    
   },
