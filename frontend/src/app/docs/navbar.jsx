@@ -7,13 +7,26 @@ import {
   IconFileAnalytics,
   IconAdjustments,
   IconLock,
+  IconComponents,
+  IconApi,
+  IconLicense,
+  IconSettingsAutomation,
+
+
+
 } from '@tabler/icons-react';
 import { UserButton } from './UserButton/UserButton';
 import { LinksGroup } from './NavbarLinkgroup/NavbarLinkGroup';
 import classes from './navbarNested.module.css';
 
 const mockdata = [
-  { label: 'API reference ', icon: IconGauge, link: '/docs/api-reference' },
+  {
+    label: 'Getting Started ',
+    icon: IconLock,
+    link: '/docs/gettingStarted'
+   
+  },
+  { label: 'API reference ', icon: IconApi, link: '/docs/api-reference' },
   {
     label: 'Contribution',
     icon: IconNotes,
@@ -35,16 +48,12 @@ const mockdata = [
       { label: 'Progress Bar', link: '/docs/example/progressbar' },
       { label: 'StatCard', link: '/docs/example/statcard' },
     ]},
-    { label:'Components', icon: IconFileAnalytics, link: '/docs/component'},
+    { label:'Components', icon: IconComponents
+    , link: '/docs/component'},
   { label: 'FAQs Trrobleshooting', icon: IconAdjustments, link: '/docs/Faqs-troubleshooting' },
-  {
-    label: 'Getting Started ',
-    icon: IconLock,
-    link: '/docs/gettingStarted'
-   
-  },
-  { label: 'License Legal ', icon: IconAdjustments, link: '/docs/License-Legal' },
-  { label: 'Performance Optimization ', icon: IconAdjustments, link: '/docs/performance-optimization' },
+ 
+  { label: 'License Legal ', icon: IconLicense, link: '/docs/License-Legal' },
+  { label: 'Performance Optimization ', icon: IconSettingsAutomation, link: '/docs/performance-optimization' },
 ];
 
 export function Navbar() {
