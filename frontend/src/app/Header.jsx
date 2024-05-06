@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Container, Flex, Tabs, useMantineTheme } from '@mantine/core';
+import { ActionIcon, Button, Container, Flex, Tabs, useMantineTheme,Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import React, { useState } from 'react';
 import classes from './header.module.css';
@@ -13,7 +13,9 @@ const Header = () => {
   return (
     <div>
       <Container size="md" style={{ paddingTop: 11, paddingBottom: 11,}} >
-        <Flex justify="right" align="center" gap={7}>
+         
+        <Flex justify="space-around" align="center" gap={7}>
+<Image src='/image/logo.png' alt='library logo' style={{height: 60,width: 290}}/>
           <Flex justify="space-between" align="center" gap={10}>
 
             <Button variant='filled' onClick={()=>router.push('/docs/navItems/Document')} >Docs</Button>

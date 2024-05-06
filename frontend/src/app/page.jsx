@@ -10,9 +10,36 @@ import AffixComponent from './AffixComponent';
 import classes from './HeroBullet.module.css';
 import { IconCheck } from '@tabler/icons-react';
 import { GithubIcon } from '@mantinex/dev-icons';
+import { useState } from 'react';
 
 const Home = () => {
   const router = useRouter();
+
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+  const [invalidEmail, setInvalidEmail] = useState(false);
+  
+  const handleInputChange = (event) => {
+    setEmail(event.target.value.trim()); // Update email state and trim whitespace
+    setInvalidEmail(false); // Reset invalidEmail state when user types
+  };
+  const handleSubscribe = () => {
+    if (!email || !isValidEmail(email)) {
+      setInvalidEmail(true); // Set invalidEmail state to true if email is invalid or empty
+      return;
+    }
+
+    // Perform subscription action here (e.g., send email to server)
+    console.log('Subscribed with email:', email);
+
+    // Update state to indicate successful subscription
+    setSubscribed(true);
+    setEmail(''); // Clear email input after successful subscription
+  };
+
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); // Validate email format
+  };
 
   return (
     <>
@@ -101,14 +128,50 @@ const Home = () => {
       </section>
 
       <section className="newsletter" style={{ background: '#00000', color: '#fff',  paddingBottom : 100 }}>
-        <Container size="xl">
+        {/* <Container size="xl">
           <Title order={2}>Subscribe to Our Newsletter</Title>
           <Text size="lg" mt={10}>Stay up-to-date with the latest updates and news.</Text>              
           <div style={{ marginTop: 40, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <TextInput placeholder="Your email" size="lg" style={{ marginRight: 20 }} />
             <Button variant="outline" color="blue" size="lg" radius="xl">Subscribe</Button>
           </div>
-        </Container>
+        </Container> */}
+         <Container size="xl">
+      <Title order={2}>Subscribe to Our Newsletter</Title>
+      <Text size="lg" mt={10}>
+        Stay up-to-date with the latest updates and news.
+      </Text>
+      <div style={{ marginTop: 40, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {!subscribed ?(
+          <>
+        
+        <TextInput
+          placeholder="Your email"
+          size="lg"
+          style={{ marginRight: 20 }}
+          value={email}
+          onChange={handleInputChange}
+          error={invalidEmail ? 'Invalid email' : null}
+        />
+        <Button
+          variant="outline"
+          color={subscribed ? 'green' : 'blue'}
+          size="lg"
+          radius="xl"
+          onClick={handleSubscribe}
+          disabled={!email || subscribed || invalidEmail}
+        >
+          Subcribe
+        </Button>
+        </>
+        ) : (
+          <b><Text fz={50} style={{color:'blue' , marginTop:20, fontWeight:'400px'}}>
+            Subscribed successfully!
+          </Text></b>
+        )}
+      </div>
+    </Container>
+
       </section>
 
       <Footer />
