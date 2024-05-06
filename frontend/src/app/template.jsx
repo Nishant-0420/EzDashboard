@@ -1,10 +1,14 @@
+'use client';
 import { SnackbarProvider } from 'notistack'
 import React from 'react'
 
 const template = ({ children }) => {
     return (
         <div>
-            <SnackbarProvider>
+            <SnackbarProvider anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+            }}>
                 {children}
             </SnackbarProvider>
         </div>

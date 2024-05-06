@@ -1,7 +1,7 @@
 {
   "name": "ez-dashboard",
-  "version": "1.0.17",
-  "description": "Easy Dashboard Library for React",
+  "version": "1.0.18",
+  "description": "EzDashboard Library for React Developers",
   "scripts": {
     "rollup": "rollup -c",
     "build": "rollup -c --bundleConfigAsCjs"

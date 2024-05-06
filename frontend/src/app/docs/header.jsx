@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import React, { useState } from 'react';
 import classes from './header.module.css';
 import { usePathname, useRouter } from 'next/navigation';
-import { IconBrandGithub, IconBrandTwitter, IconBrandNpm } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandTwitter, IconBrandNpm, IconBrandInstagram } from '@tabler/icons-react';
 import Link from 'next/link';
 
 const Header = () => {
@@ -12,24 +12,24 @@ const Header = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <div>
-      <Container size="md" style={{ paddingTop: 11, paddingBottom: 14,paddingRight:50}} >
-        <Flex justify="right" align="center" gap={7}>
-          <Flex justify="space-between" align="center" gap={10}>
+    <div  >
+      <Container size="xl" style={{ paddingTop: 9, paddingBottom: 18,paddingRight:70 , paddingLeft:50}} >
+        <Flex justify="right" align="center" gap={12}>
+          <Flex justify="space-between" align="center" gap={12}>
 
             <Button variant='filled' onClick={() => router.push('/docs/navItems/Document')} >Docs</Button>
             <Button variant='filled' onClick={() => router.push('/docs/navItems/About')}>About</Button>
             <Button variant='filled' onClick={() => router.push('/docs/navItems/Feedback')} >Feedback</Button>
           </Flex>
-          <Flex justify="space-between" align="center" gap={10}>
+          <Flex justify="space-between" align="center" gap={12}>
 
             <ActionIcon variant='filled' color='dark' component={Link} href="">
               <IconBrandGithub />
             </ActionIcon>
             <ActionIcon variant='filled' color='dark' component={Link} href="">
-              <IconBrandTwitter />
+              <IconBrandInstagram />
             </ActionIcon>
-            <ActionIcon variant='filled' color='dark' component={Link} href="">
+            <ActionIcon variant='filled' color='dark' component={Link} href="https://www.npmjs.com/package/ez-dashboard">
               <IconBrandNpm />
             </ActionIcon>
           </Flex>
