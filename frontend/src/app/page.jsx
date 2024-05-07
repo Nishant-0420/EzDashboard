@@ -86,7 +86,7 @@ const Home = () => {
            
               Get started
             </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.control}  leftSection={<GithubIcon size={20}/>} component={Link} href="https://www.npmjs.com/package/ez-dashboard">
+            <Button variant="default" radius="xl" size="md" className={classes.control}  leftSection={<GithubIcon size={20}/>} component={Link} href="https://github.com/Nishant-0420/EzDashboard">
           
             GitHub
             </Button>
