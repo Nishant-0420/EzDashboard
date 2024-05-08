@@ -31,7 +31,7 @@ const ComingSoonPage = () => {
     <Container size="xl" style={{ textAlign: 'center', marginTop: '50px' }}>
       <Title order={1}>Coming Soon</Title>
       <Text size="lg" style={{ marginBottom: '30px' }}>
-        We're working hard to bring you something amazing!
+        We&quot;re working hard to bring you something amazing!
       </Text>
       <Badge variant="filled" color="teal" size="lg" style={{ marginBottom: '30px' }}>
         Launching in:
