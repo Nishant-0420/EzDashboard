@@ -30,7 +30,7 @@ const PreviousReleasesPage = () => {
           'Bug fixes',
         ],
         }
-    // Add more releases as needed
+ 
   ];
 
   return (
