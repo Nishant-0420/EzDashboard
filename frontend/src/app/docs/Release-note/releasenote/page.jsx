@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Title, Text, Divider } from '@mantine/core';
-import './releasenote.module.css'; // Import custom CSS for styling
+import './releasenote.module.css';
 
 const PreviousReleasesPage = () => {
   const releases = [
