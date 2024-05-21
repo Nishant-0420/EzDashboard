@@ -33,7 +33,7 @@ const FaqsTroubleshooting = () => {
              <br />
              <Image src="/image/tawlind.png" alt="code" style={{ height: '300px', width: '500px' }} />
               <br />
-              ADD this line :"./node_modules/ez-dashboard/dist/esm/*/.js"  
+              ADD this line :&quot;./node_modules/ez-dashboard/dist/esm/*/.js&quot; 
             </li>
             <li>
              <b>Step 4: ADD tailwind directives to your css (index.css)</b>  <br />
@@ -72,27 +72,27 @@ const FaqsTroubleshooting = () => {
       <Title order={3}>1. My dashboard components are not rendering correctly.</Title><br/>
       <ul>
         <li>
-        Double-check imports: Ensure you're correctly importing necessary components from ez-dashboard.
+        Double-check imports: Ensure you&quot;re correctly importing necessary components from ez-dashboard.
         </li>
         <li>
-        Verify props: Make sure you're passing the required props to each component. Refer to the documentation for specific prop requirements of each component.
+        Verify props: Make sure you&quot;re passing the required props to each component. Refer to the documentation for specific prop requirements of each component.
         </li>
         <li>
-        Console errors: Inspect your browser's developer console for any error messages that might indicate issues with data formatting, component usage, or other potential problems.
+        Console errors: Inspect your browser&quot;s developer console for any error messages that might indicate issues with data formatting, component usage, or other potential problems.
         </li>
       </ul>
       <Title order={3}>2. My charts are not displaying data as expected.</Title><br/>
       <ul>
         <li>
-        Data format: Check that your data is formatted correctly for the chart type you're using. Refer to the documentation for specific data requirements.
+        Data format: Check that your data is formatted correctly for the chart type you&quot;re using. Refer to the documentation for specific data requirements.
         </li>
         <li>
-        Data availability: Verify that the data you're trying to visualize is actually available and populated
+        Data availability: Verify that the data you&quot;re trying to visualize is actually available and populated
         </li>
       
 
       </ul>  
-      <Title order={3}>3. I'm encountering errors related to specific EzDashboard components.</Title><br/>
+      <Title order={3}>3. I&quot;m encountering errors related to specific EzDashboard components.</Title><br/>
       <Text style={{marginLeft:'20px'}}>
       For component-specific issues, consult the documentation for that component. It might provide troubleshooting tips or known limitations.
       </Text><br />

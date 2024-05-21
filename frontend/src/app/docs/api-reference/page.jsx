@@ -14,10 +14,10 @@ const ApiReferencePage = () => {
         </Title></u>
         <br />
         <Title order={3} >
-        Imagine Ez-dashboard as your personal data playground!It's not just dry charts and numbers, it's a portal to transform your data into a captivating story.
+        Imagine Ez-dashboard as your personal data playground!It&quot;s not just dry charts and numbers, it&quot;s a portal to transform your data into a captivating story.
         </Title>
         <Text ><b>
-        Here's how Ez-dashboard's components can make things exciting:
+        Here&quot;s how Ez-dashboard&quot;s components can make things exciting:
         </b></Text>
         <br />
         <Text >
@@ -33,11 +33,11 @@ const ApiReferencePage = () => {
         </Text>
         <br />
         <Alert color="blue">
-        Ez-dashboard isn't just about presenting data, it's about bringing it to life in a way that engages, informs, and even inspires. It's like having a magic wand that transforms raw information into an interactive wonderland of discovery.
+        Ez-dashboard isn&quot;t just about presenting data, it&quot;s about bringing it to life in a way that engages, informs, and even inspires. It&quot;s like having a magic wand that transforms raw information into an interactive wonderland of discovery.
         </Alert>
         <br />
         <Text >
-        So go ahead, dive into Ez-dashboard's API Reference and start creating your own data stories today!<br />
+        So go ahead, dive into Ez-dashboard&quot;s API Reference and start creating your own data stories today!<br />
         Some common components you will find under ez-dashboard are:
         </Text>
         <br />

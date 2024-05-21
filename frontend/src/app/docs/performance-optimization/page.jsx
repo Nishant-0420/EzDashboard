@@ -11,7 +11,7 @@ const PerformanceOptimization = () => {
 
         <Text>
           Welcome to the performance optimization guide for <Code>ez-dashboard</Code>! In this guide,
-          you'll learn how to optimize the performance of applications using <Code>ez-dashboard</Code> to
+          you&quot;ll learn how to optimize the performance of applications using <Code>ez-dashboard</Code> to
           ensure fast rendering and responsive user experiences.
         </Text>
         <br />

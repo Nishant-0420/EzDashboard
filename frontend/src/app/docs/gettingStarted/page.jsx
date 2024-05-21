@@ -77,7 +77,7 @@ const gettingStarted = () => {
              <br />
              <Image src="/image/tawlind.png" alt="code" style={{ height: '300px', width: '500px' }} />
               <br />
-              ADD this line :"./node_modules/ez-dashboard/dist/esm/*/.js"  
+              ADD this line :&quot;./node_modules/ez-dashboard/dist/esm/*/.js&quot;  
             </li>
             <li>
              <b>Step 4: ADD tailwind directives to your css (index.css)</b>  <br />

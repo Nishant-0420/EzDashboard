@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
 import cx from 'clsx';
-import { Box, Text, Group, rem, active } from '@mantine/core';
+import { Box, Text, Group, rem } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons-react';
 import classes from './Aside.module.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const links = [
   { label: 'Alert', link: '/docs/component/alert', order: 1 },
@@ -28,12 +29,15 @@ const links = [
 ]
 
 const Aside = () => {
+
+  const path = usePathname();
+
   const items = links.map((item) => (
     <Box
       component={Link}
       href={item.link}
       key={item.label}
-      className={cx(classes.link, { [classes.linkActive]: active === item.link })}
+      className={cx(classes.link, { [classes.linkActive]: path === item.link })}
       style={{ paddingLeft: `calc(${item.order} * var(--mantine-spacing-md))` }}
     >
       {item.label}

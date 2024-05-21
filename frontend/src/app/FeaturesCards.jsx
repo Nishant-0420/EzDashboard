@@ -67,7 +67,7 @@ const   FeaturesCards = () => {
     </Title>
 
     <Text c="dimmed" className={classes.description} ta="center" mt="md">
-    Make informed decisions faster with EzDashboard's intuitive features.
+    Make informed decisions faster with EzDashboard&lsquo;s intuitive features.
     </Text>
 
     <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
