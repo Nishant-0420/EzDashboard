@@ -6,7 +6,7 @@ const PreviousReleasesPage = () => {
   const releases = [
     {
       version: 'v1.0.0',
-      date: 'April 1, 2022',
+      date: 'April 1, 2024',
       notes: [
         'Initial release of EzDashboard',
         'Added basic dashboard components',
@@ -14,7 +14,7 @@ const PreviousReleasesPage = () => {
     },
     {
       version: 'v1.0.9',
-      date: 'April 15, 2022',
+      date: 'April 15, 2024',
       notes: [
         'Added new Charts and Graphs',
         'Improved customization options',
@@ -23,7 +23,7 @@ const PreviousReleasesPage = () => {
     },
     {
         version: 'v1.1.0',
-        date: 'May 7, 2022',
+        date: 'May 7, 2024',
         notes: [
           'Added more dashboard components',
           'Improved performance',
